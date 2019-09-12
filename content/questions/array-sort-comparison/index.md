@@ -2,10 +2,10 @@
 title: Array Sort Comparison
 tags: arrays, sort, comparison
 order: 1
-right: false false false
+right: true true false
 wrong:
   - true true true
-  - true true false
+  - false false false
   - true false true
 ---
 
@@ -22,6 +22,6 @@ console.log(
 );
 ```
 
-## Explanation
+<!-- explanation -->
 
 Some _explanation_ here

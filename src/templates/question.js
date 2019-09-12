@@ -5,14 +5,20 @@ import Bio from '../components/bio';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 import { rhythm, scale } from '../utils/typography';
+import { shuffle } from '../utils/shuffle';
 
 class QuestionTemplate extends React.Component {
   render() {
-    console.log(this.props);
     const post = this.props.data.markdownRemark;
+    const [postContent, explanationContent] = post.html.split(
+      '<!-- explanation -->'
+    );
     const siteTitle = this.props.data.site.siteMetadata.title;
-    const { explanation } = post;
     const { previous, next } = this.props.pageContext;
+
+    const answers = [...post.frontmatter.wrong];
+    answers.push(post.frontmatter.right);
+    shuffle(answers);
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
@@ -35,9 +41,24 @@ class QuestionTemplate extends React.Component {
               }}
             ></p>
           </header>
-          <section dangerouslySetInnerHTML={{ __html: post.html }} />
+          <section dangerouslySetInnerHTML={{ __html: postContent }} />
+          <h3>Select one:</h3>
+          {answers.map(answer => (
+            <div>
+              <label key={answer} htmlFor={answer}>
+                <input
+                  type="radio"
+                  name="answer"
+                  value={answer}
+                  checked={false}
+                />
+                {answer}
+              </label>
+            </div>
+          ))}
+
           <h3>Explanation</h3>
-          <p dangerouslySetInnerHTML={{ __html: explanation }} />
+          <section dangerouslySetInnerHTML={{ __html: explanationContent }} />
           <hr
             style={{
               marginBottom: rhythm(1)
@@ -92,10 +113,11 @@ export const pageQuery = graphql`
     markdownRemark(fields: { slug: { eq: $slug } }) {
       id
       excerpt(pruneLength: 160)
-      explanation
       html
       frontmatter {
         title
+        right
+        wrong
       }
     }
   }
