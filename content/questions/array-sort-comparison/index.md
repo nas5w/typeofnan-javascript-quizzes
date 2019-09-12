@@ -2,9 +2,9 @@
 title: Array Sort Comparison
 tags: arrays, sort, comparison
 order: 1
-right: true true false
-wrong:
+answers:
   - true true true
+  - true true false <-- correct
   - false false false
   - true false true
 ---
