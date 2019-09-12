@@ -8,8 +8,10 @@ import { rhythm, scale } from '../utils/typography';
 
 class QuestionTemplate extends React.Component {
   render() {
+    console.log(this.props);
     const post = this.props.data.markdownRemark;
     const siteTitle = this.props.data.site.siteMetadata.title;
+    const { explanation } = post;
     const { previous, next } = this.props.pageContext;
 
     return (
@@ -34,6 +36,8 @@ class QuestionTemplate extends React.Component {
             ></p>
           </header>
           <section dangerouslySetInnerHTML={{ __html: post.html }} />
+          <h3>Explanation</h3>
+          <p dangerouslySetInnerHTML={{ __html: explanation }} />
           <hr
             style={{
               marginBottom: rhythm(1)
@@ -88,6 +92,7 @@ export const pageQuery = graphql`
     markdownRemark(fields: { slug: { eq: $slug } }) {
       id
       excerpt(pruneLength: 160)
+      explanation
       html
       frontmatter {
         title

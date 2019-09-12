@@ -14,6 +14,7 @@ exports.createPages = async ({ graphql, actions }) => {
         ) {
           edges {
             node {
+              explanation
               fields {
                 slug
               }
@@ -55,6 +56,11 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions;
 
   if (node.internal.type === `MarkdownRemark`) {
+    const [question, explanation] = node.internal.content
+      .split('## Explanation')
+      .map(section => section.trim());
+    node.internal.content = question;
+    node.explanation = explanation;
     const value = createFilePath({ node, getNode });
     createNodeField({
       name: `slug`,

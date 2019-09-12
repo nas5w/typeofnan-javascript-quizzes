@@ -1,19 +1,36 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
-    author: `Kyle Mathews`,
-    description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
+    title: `TypeOfNaN JavaScript Quizzes`,
+    author: `Nick Scialli`,
+    description: `JavaScript quizes to hone your skills`,
+    siteUrl: `https://quiz.typeofnan.dev`,
     social: {
-      twitter: `kylemathews`
+      twitter: `nas5w`
     }
   },
   plugins: [
     {
+      resolve: `gatsby-plugin-node-fields`,
+      options: {
+        descriptors: [
+          {
+            predicate: node => node.internal.type === `MarkdownRemark`,
+            fields: [
+              {
+                name: 'explanation',
+                getter: node => node.explanation,
+                defaultValue: 'No explanation provided'
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/content/questions`,
-        name: `blog`
+        name: `questions`
       }
     },
     {

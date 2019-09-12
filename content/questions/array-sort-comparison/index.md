@@ -2,9 +2,12 @@
 title: Array Sort Comparison
 tags: arrays, sort, comparison
 order: 1
+right: false false false
+wrong:
+  - true true true
+  - true true false
+  - true false true
 ---
-
-# Question
 
 What gets logged?
 
@@ -19,16 +22,6 @@ console.log(
 );
 ```
 
-# Incorrect Answers
+## Explanation
 
-- true true true
-- true false true
-- false false false
-
-# Correct Answer
-
-- true true false
-
-# Explanation
-
-This is some explanation
+Some _explanation_ here
