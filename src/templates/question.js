@@ -1,15 +1,30 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, graphql } from 'gatsby';
 
-import Bio from '../components/bio';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 import { rhythm, scale } from '../utils/typography';
+import {
+  persistAnswer,
+  getPersistedAnswer,
+  clearPersistedAnswer
+} from '../utils/persistAnswers';
 
 const QuestionTemplate = props => {
-  const [selectedAnswer, setSelectedAnswer] = useState(null);
-
   const post = props.data.markdownRemark;
+  const { title } = post.frontmatter;
+
+  const { selectedAnswer: selectedAnswerFromStorage } = getPersistedAnswer(
+    title
+  );
+
+  const [selectedAnswer, setSelectedAnswer] = useState(
+    selectedAnswerFromStorage
+  );
+  const [submittedAnswer, setSubmittedAnswer] = useState(
+    selectedAnswerFromStorage
+  );
+
   const [postContent, explanationContent] = post.html.split(
     '<!-- explanation -->'
   );
@@ -24,6 +39,18 @@ const QuestionTemplate = props => {
     }
     return answer;
   });
+
+  const clearAnswer = () => {
+    setSelectedAnswer(null);
+    setSubmittedAnswer(null);
+    clearPersistedAnswer(title);
+  };
+
+  useEffect(() => {
+    if (selectedAnswer) {
+      persistAnswer(title, selectedAnswer, correct);
+    }
+  }, [selectedAnswer, correct, title]);
 
   return (
     <Layout location={props.location} title={siteTitle}>
@@ -57,17 +84,28 @@ const QuestionTemplate = props => {
               id={answer}
               onClick={() => setSelectedAnswer(answer)}
               checked={selectedAnswer === answer}
-              disabled={selectedAnswer !== null}
+              disabled={submittedAnswer !== null}
             />
             <label style={{ marginLeft: '10px' }} key={answer} htmlFor={answer}>
               {answer}
             </label>
           </div>
         ))}
-
-        {selectedAnswer !== null && (
+        {submittedAnswer === null ? (
+          <button
+            type="submit"
+            onClick={() => setSubmittedAnswer(selectedAnswer)}
+          >
+            Submit
+          </button>
+        ) : (
+          <button type="submit" onClick={clearAnswer}>
+            Clear Answer
+          </button>
+        )}
+        {submittedAnswer !== null && (
           <React.Fragment>
-            {correct === selectedAnswer ? 'Correct!' : 'Incorrect'}
+            {correct === submittedAnswer ? 'Correct!' : 'Incorrect'}
             <h3>Explanation:</h3>
             <section dangerouslySetInnerHTML={{ __html: explanationContent }} />
           </React.Fragment>
