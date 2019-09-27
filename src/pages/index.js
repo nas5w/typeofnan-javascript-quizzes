@@ -1,50 +1,75 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link, graphql } from 'gatsby';
 
 import Bio from '../components/bio';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
-import { rhythm } from '../utils/typography';
+import { AboutModal } from '../components/modal';
 import { getPersistedAnswer } from '../utils/persistAnswers';
+import 'semantic-ui-css/semantic.css';
+import './index.css';
+import { Divider } from 'semantic-ui-react';
 
-class BlogIndex extends React.Component {
-  render() {
-    const { data } = this.props;
-    const siteTitle = data.site.siteMetadata.title;
-    const posts = data.allMarkdownRemark.edges;
+const BlogIndex = props => {
+  const { data } = props;
+  const siteTitle = data.site.siteMetadata.title;
+  const posts = data.allMarkdownRemark.edges;
 
-    return (
-      <Layout location={this.props.location} title={siteTitle}>
-        <SEO title="All posts" />
-        <Bio />
+  const [modalOpen, setModalOpen] = useState(false);
+
+  useEffect(() => {
+    document.body.style.backgroundImage = null;
+  }, []);
+
+  return (
+    <Layout location={props.location} title={siteTitle}>
+      <SEO title="All posts" />
+      <Bio />
+      <ol>
         {posts.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug;
           const { selectedAnswer, correctAnswer } = getPersistedAnswer(title);
           let correctIndicator;
           if (selectedAnswer !== null) {
-            correctIndicator = correctAnswer === selectedAnswer ? '✔' : '✗';
+            correctIndicator =
+              correctAnswer === selectedAnswer ? (
+                <span style={{ color: 'green' }}>
+                  <i class="check circle icon"></i>
+                </span>
+              ) : (
+                <span style={{ color: 'red' }}>
+                  <i class="times circle icon"></i>
+                </span>
+              );
           }
           return (
-            <article key={node.fields.slug}>
-              <header>
-                <h3
-                  style={{
-                    marginBottom: rhythm(1 / 4)
-                  }}
-                >
-                  {correctIndicator}
+            <li key={node.fields.slug}>
+              <article>
+                <header>
                   <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
                     {title}
-                  </Link>
-                </h3>
-              </header>
-            </article>
+                  </Link>{' '}
+                  {correctIndicator}
+                </header>
+              </article>
+            </li>
           );
         })}
-      </Layout>
-    );
-  }
-}
+      </ol>
+      <button
+        className="ui basic green button"
+        onClick={() => setModalOpen(true)}
+      >
+        Read why I make these quizzes &raquo;
+      </button>
+      <Divider />
+      <AboutModal
+        modalIsOpen={modalOpen}
+        closeModal={() => setModalOpen(false)}
+      />
+    </Layout>
+  );
+};
 
 export default BlogIndex;
 

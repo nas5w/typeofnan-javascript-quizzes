@@ -3,12 +3,15 @@ import { Link, graphql } from 'gatsby';
 
 import Layout from '../components/layout';
 import SEO from '../components/seo';
-import { rhythm, scale } from '../utils/typography';
+import { rhythm } from '../utils/typography';
 import {
   persistAnswer,
   getPersistedAnswer,
   clearPersistedAnswer
 } from '../utils/persistAnswers';
+import { Button, Form, Grid, Divider } from 'semantic-ui-react';
+import correctBg from './correct.png';
+import incorrectBg from './incorrect.png';
 
 const QuestionTemplate = props => {
   const post = props.data.markdownRemark;
@@ -52,65 +55,106 @@ const QuestionTemplate = props => {
     }
   }, [selectedAnswer, correct, title]);
 
+  useEffect(() => {
+    const bg =
+      submittedAnswer === null
+        ? ''
+        : submittedAnswer === correct
+        ? correctBg
+        : incorrectBg;
+    document.body.style.backgroundImage = `url(${bg})`;
+  }, [submittedAnswer, correct]);
+
+  const buttonText =
+    submittedAnswer === null
+      ? 'Submit'
+      : submittedAnswer === correct
+      ? 'Correct!'
+      : 'Incorrect';
+
   return (
     <Layout location={props.location} title={siteTitle}>
       <SEO title={post.frontmatter.title} description={post.excerpt} />
-      <article>
-        <header>
-          <h1
-            style={{
-              marginTop: rhythm(1),
-              marginBottom: 0
-            }}
-          >
-            {post.frontmatter.title}
-          </h1>
-          <p
-            style={{
-              ...scale(-1 / 5),
-              display: `block`,
-              marginBottom: rhythm(1)
-            }}
-          ></p>
-        </header>
-        <section dangerouslySetInnerHTML={{ __html: postContent }} />
-        <h3>Select one:</h3>
-        {answers.map(answer => (
-          <div style={{ marginBottom: '5px' }}>
-            <input
-              type="radio"
-              name="answer"
-              value={answer}
-              id={answer}
-              onClick={() => setSelectedAnswer(answer)}
-              checked={selectedAnswer === answer}
-              disabled={submittedAnswer !== null}
-            />
-            <label style={{ marginLeft: '10px' }} key={answer} htmlFor={answer}>
-              {answer}
-            </label>
-          </div>
-        ))}
-        {submittedAnswer === null ? (
-          <button
-            type="submit"
-            onClick={() => setSubmittedAnswer(selectedAnswer)}
-          >
-            Submit
-          </button>
-        ) : (
-          <button type="submit" onClick={clearAnswer}>
-            Clear Answer
-          </button>
-        )}
-        {submittedAnswer !== null && (
-          <React.Fragment>
-            {correct === submittedAnswer ? 'Correct!' : 'Incorrect'}
-            <h3>Explanation:</h3>
-            <section dangerouslySetInnerHTML={{ __html: explanationContent }} />
-          </React.Fragment>
-        )}
-      </article>
+      <Grid
+        style={{
+          backgroundColor: 'rgba(255, 255, 255, 0.9)',
+          marginTop: '20px'
+        }}
+      >
+        <Grid.Column>
+          <article>
+            <header>
+              <h1
+                style={{
+                  marginTop: rhythm(1),
+                  marginBottom: 0
+                }}
+              >
+                {post.frontmatter.title}
+              </h1>
+            </header>
+            <Form size="large">
+              <p>
+                <section dangerouslySetInnerHTML={{ __html: postContent }} />
+              </p>
+              <h3>Select one:</h3>
+              {answers.map(answer => (
+                <div key={answer} style={{ marginBottom: '5px' }}>
+                  <input
+                    type="radio"
+                    name="answer"
+                    value={answer}
+                    id={answer}
+                    onClick={() => setSelectedAnswer(answer)}
+                    checked={selectedAnswer === answer}
+                    disabled={submittedAnswer !== null}
+                  />
+                  <label
+                    style={{ marginLeft: '10px' }}
+                    key={answer}
+                    htmlFor={answer}
+                  >
+                    {answer}
+                  </label>
+                </div>
+              ))}
+              <Divider />
+              <Button
+                color={
+                  submittedAnswer === null
+                    ? 'blue'
+                    : submittedAnswer === correct
+                    ? 'green'
+                    : 'red'
+                }
+                fluid
+                size="large"
+                onClick={() => setSubmittedAnswer(selectedAnswer)}
+                disabled={selectedAnswer === null || submittedAnswer !== null}
+              >
+                {buttonText}
+              </Button>
+            </Form>
+            {submittedAnswer !== null && (
+              <React.Fragment>
+                <h2>Explanation:</h2>
+                <section
+                  dangerouslySetInnerHTML={{ __html: explanationContent }}
+                />
+              </React.Fragment>
+            )}
+
+            {submittedAnswer !== null && (
+              <React.Fragment>
+                <Divider />
+                <Button onClick={clearAnswer} className="ui red basic button">
+                  Clear My answer
+                </Button>
+              </React.Fragment>
+            )}
+          </article>
+        </Grid.Column>
+      </Grid>
       <nav>
         <ul
           style={{
