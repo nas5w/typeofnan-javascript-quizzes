@@ -10,6 +10,14 @@ module.exports = {
   },
   plugins: [
     {
+      resolve: 'gatsby-plugin-web-font-loader',
+      options: {
+        google: {
+          families: ['Permanent Marker']
+        }
+      }
+    },
+    {
       resolve: `gatsby-plugin-node-fields`,
       options: {
         descriptors: [

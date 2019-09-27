@@ -9,7 +9,7 @@ import {
   getPersistedAnswer,
   clearPersistedAnswer
 } from '../utils/persistAnswers';
-import { Button, Form, Grid, Divider } from 'semantic-ui-react';
+import { Button, Form, Grid } from 'semantic-ui-react';
 import correctBg from './correct.png';
 import incorrectBg from './incorrect.png';
 
@@ -87,16 +87,15 @@ const QuestionTemplate = props => {
               <h1
                 style={{
                   marginTop: rhythm(1),
-                  marginBottom: 0
+                  marginBottom: 15
                 }}
               >
                 {post.frontmatter.title}
               </h1>
             </header>
             <Form size="large">
-              <p>
-                <section dangerouslySetInnerHTML={{ __html: postContent }} />
-              </p>
+              <section dangerouslySetInnerHTML={{ __html: postContent }} />
+
               <h3>Select one:</h3>
               {answers.map(answer => (
                 <div key={answer} style={{ marginBottom: '5px' }}>
@@ -115,10 +114,17 @@ const QuestionTemplate = props => {
                     htmlFor={answer}
                   >
                     {answer}
+                    {answer === correct && submittedAnswer !== null && (
+                      <React.Fragment>
+                        {' '}
+                        <i class="long arrow alternate left icon"></i>
+                        CORRECT ANSWER
+                      </React.Fragment>
+                    )}
                   </label>
                 </div>
               ))}
-              <Divider />
+              <br />
               <Button
                 color={
                   submittedAnswer === null
@@ -146,7 +152,7 @@ const QuestionTemplate = props => {
 
             {submittedAnswer !== null && (
               <React.Fragment>
-                <Divider />
+                <br />
                 <Button onClick={clearAnswer} className="ui red basic button">
                   Clear My answer
                 </Button>
