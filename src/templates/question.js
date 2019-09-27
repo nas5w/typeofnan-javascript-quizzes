@@ -153,7 +153,14 @@ const QuestionTemplate = props => {
             {submittedAnswer !== null && (
               <React.Fragment>
                 <br />
-                <Button onClick={clearAnswer} className="ui red basic button">
+                <Button
+                  onClick={() => {
+                    window.confirm(
+                      'Are you sure you want to clear your answer for this question?'
+                    ) && clearAnswer();
+                  }}
+                  className="ui red basic button"
+                >
                   Clear My answer
                 </Button>
               </React.Fragment>
