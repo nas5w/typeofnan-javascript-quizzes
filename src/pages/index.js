@@ -34,11 +34,11 @@ const BlogIndex = props => {
             correctIndicator =
               correctAnswer === selectedAnswer ? (
                 <span style={{ color: 'green' }}>
-                  <i class="check circle icon"></i>
+                  <i className="check circle icon"></i>
                 </span>
               ) : (
                 <span style={{ color: 'red' }}>
-                  <i class="times circle icon"></i>
+                  <i className="times circle icon"></i>
                 </span>
               );
           }

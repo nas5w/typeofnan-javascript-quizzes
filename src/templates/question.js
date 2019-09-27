@@ -36,8 +36,8 @@ const QuestionTemplate = props => {
 
   let correct;
   const answers = post.frontmatter.answers.map(answer => {
-    if (answer.search('<-- correct') > -1) {
-      answer = answer.split('<-- correct')[0].trim();
+    if (answer.search('// correct') > -1) {
+      answer = answer.split('// correct')[0].trim();
       correct = answer;
     }
     return answer;
@@ -162,20 +162,22 @@ const QuestionTemplate = props => {
             flexWrap: `wrap`,
             justifyContent: `space-between`,
             listStyle: `none`,
-            padding: 0
+            padding: '15px 15px 10px 15px',
+            margin: '30px -14px',
+            backgroundColor: 'rgba(255, 255, 255, 0.7)'
           }}
         >
           <li>
-            {previous && (
-              <Link to={previous.fields.slug} rel="prev">
-                ← {previous.frontmatter.title}
+            {next && (
+              <Link to={next.fields.slug} rel="prev">
+                ← {next.frontmatter.title}
               </Link>
             )}
           </li>
           <li>
-            {next && (
-              <Link to={next.fields.slug} rel="next">
-                {next.frontmatter.title} →
+            {previous && (
+              <Link to={previous.fields.slug} rel="next">
+                {previous.frontmatter.title} →
               </Link>
             )}
           </li>

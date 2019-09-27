@@ -1,10 +1,13 @@
 ---
 title: Array Sort Comparison
-tags: arrays, sort, comparison
+tags:
+  - arrays
+  - sort
+  - comparison
 order: 1
 answers:
   - true true true
-  - true true false <-- correct
+  - true true false // correct
   - false false false
   - true false true
 ---
