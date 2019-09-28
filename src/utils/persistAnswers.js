@@ -1,12 +1,19 @@
-export const persistAnswer = (title, selectedAnswer, correctAnswer) => {
-  localStorage.setItem(
-    title,
-    JSON.stringify({ selectedAnswer, correctAnswer })
-  );
+export const persistAnswer = (
+  title,
+  selectedAnswer,
+  correctAnswer
+) => {
+  typeof window !== 'undefined' &&
+    localStorage.setItem(
+      title,
+      JSON.stringify({ selectedAnswer, correctAnswer })
+    );
 };
 
 export const getPersistedAnswer = title => {
-  const item = localStorage.getItem(title);
+  const item =
+    typeof window !== 'undefined' &&
+    localStorage.getItem(title);
   if (!item) {
     return { selectedAnswer: null, correctAnswer: null };
   }
@@ -14,5 +21,6 @@ export const getPersistedAnswer = title => {
 };
 
 export const clearPersistedAnswer = title => {
-  localStorage.removeItem(title);
+  typeof window !== 'undefined' &&
+    localStorage.removeItem(title);
 };
