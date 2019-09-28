@@ -1,15 +1,22 @@
 const path = require(`path`);
-const { createFilePath } = require(`gatsby-source-filesystem`);
+const {
+  createFilePath
+} = require(`gatsby-source-filesystem`);
 
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions;
 
-  const questionTemplate = path.resolve(`./src/templates/question.js`);
+  const questionTemplate = path.resolve(
+    `./src/templates/question.js`
+  );
   const result = await graphql(
     `
       {
         allMarkdownRemark(
-          sort: { fields: [frontmatter___order], order: ASC }
+          sort: {
+            fields: [frontmatter___order]
+            order: ASC
+          }
           limit: 1000
         ) {
           edges {
@@ -19,6 +26,7 @@ exports.createPages = async ({ graphql, actions }) => {
               }
               frontmatter {
                 title
+                date
               }
             }
           }
@@ -36,8 +44,11 @@ exports.createPages = async ({ graphql, actions }) => {
 
   questions.forEach((question, index) => {
     const previous =
-      index === questions.length - 1 ? null : questions[index + 1].node;
-    const next = index === 0 ? null : questions[index - 1].node;
+      index === questions.length - 1
+        ? null
+        : questions[index + 1].node;
+    const next =
+      index === 0 ? null : questions[index - 1].node;
 
     createPage({
       path: question.node.fields.slug,

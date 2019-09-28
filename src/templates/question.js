@@ -17,9 +17,9 @@ const QuestionTemplate = props => {
   const post = props.data.markdownRemark;
   const { title } = post.frontmatter;
 
-  const { selectedAnswer: selectedAnswerFromStorage } = getPersistedAnswer(
-    title
-  );
+  const {
+    selectedAnswer: selectedAnswerFromStorage
+  } = getPersistedAnswer(title);
 
   const [selectedAnswer, setSelectedAnswer] = useState(
     selectedAnswerFromStorage
@@ -74,7 +74,10 @@ const QuestionTemplate = props => {
 
   return (
     <Layout location={props.location} title={siteTitle}>
-      <SEO title={post.frontmatter.title} description={post.excerpt} />
+      <SEO
+        title={post.frontmatter.title}
+        description={post.excerpt}
+      />
       <Grid
         style={{
           backgroundColor: 'rgba(255, 255, 255, 0.9)',
@@ -94,17 +97,26 @@ const QuestionTemplate = props => {
               </h1>
             </header>
             <Form size="large">
-              <section dangerouslySetInnerHTML={{ __html: postContent }} />
+              <section
+                dangerouslySetInnerHTML={{
+                  __html: postContent
+                }}
+              />
 
               <h3>Select one:</h3>
               {answers.map(answer => (
-                <div key={answer} style={{ marginBottom: '5px' }}>
+                <div
+                  key={answer}
+                  style={{ marginBottom: '5px' }}
+                >
                   <input
                     type="radio"
                     name="answer"
                     value={answer}
                     id={answer}
-                    onClick={() => setSelectedAnswer(answer)}
+                    onClick={() =>
+                      setSelectedAnswer(answer)
+                    }
                     checked={selectedAnswer === answer}
                     disabled={submittedAnswer !== null}
                   />
@@ -114,13 +126,14 @@ const QuestionTemplate = props => {
                     htmlFor={answer}
                   >
                     {answer}
-                    {answer === correct && submittedAnswer !== null && (
-                      <React.Fragment>
-                        {' '}
-                        <i class="long arrow alternate left icon"></i>
-                        CORRECT ANSWER
-                      </React.Fragment>
-                    )}
+                    {answer === correct &&
+                      submittedAnswer !== null && (
+                        <React.Fragment>
+                          {' '}
+                          <i class="long arrow alternate left icon"></i>
+                          CORRECT ANSWER
+                        </React.Fragment>
+                      )}
                   </label>
                 </div>
               ))}
@@ -135,8 +148,13 @@ const QuestionTemplate = props => {
                 }
                 fluid
                 size="large"
-                onClick={() => setSubmittedAnswer(selectedAnswer)}
-                disabled={selectedAnswer === null || submittedAnswer !== null}
+                onClick={() =>
+                  setSubmittedAnswer(selectedAnswer)
+                }
+                disabled={
+                  selectedAnswer === null ||
+                  submittedAnswer !== null
+                }
               >
                 {buttonText}
               </Button>
@@ -145,7 +163,9 @@ const QuestionTemplate = props => {
               <React.Fragment>
                 <h2>Explanation:</h2>
                 <section
-                  dangerouslySetInnerHTML={{ __html: explanationContent }}
+                  dangerouslySetInnerHTML={{
+                    __html: explanationContent
+                  }}
                 />
               </React.Fragment>
             )}
@@ -217,6 +237,7 @@ export const pageQuery = graphql`
       frontmatter {
         title
         answers
+        date
       }
     }
   }

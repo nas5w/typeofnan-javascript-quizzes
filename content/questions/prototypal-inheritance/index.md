@@ -3,6 +3,7 @@ title: Prototypal Inheritance
 tags:
   - prototype
 order: 4
+date: '2019-09-27'
 answers:
   - 'woof // correct'
   - 'arf'

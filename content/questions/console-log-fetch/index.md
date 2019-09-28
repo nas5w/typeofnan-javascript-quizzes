@@ -3,6 +3,7 @@ title: Console Log Fetch
 tags:
   - fetch
 order: 6
+date: '2019-09-27'
 answers:
   - 'The fetch function'
   - 'A reference error'

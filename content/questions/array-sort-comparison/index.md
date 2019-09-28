@@ -5,6 +5,7 @@ tags:
   - sort
   - comparison
 order: 1
+date: '2019-09-27'
 answers:
   - true true true
   - true true false // correct

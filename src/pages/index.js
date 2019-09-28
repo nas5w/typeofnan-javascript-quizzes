@@ -23,8 +23,12 @@ const BlogIndex = props => {
       <Bio />
       <ol>
         {posts.map(({ node }) => {
-          const title = node.frontmatter.title || node.fields.slug;
-          const { selectedAnswer, correctAnswer } = getPersistedAnswer(title);
+          const title =
+            node.frontmatter.title || node.fields.slug;
+          const {
+            selectedAnswer,
+            correctAnswer
+          } = getPersistedAnswer(title);
           let correctIndicator;
           if (selectedAnswer !== null) {
             correctIndicator =
@@ -42,7 +46,10 @@ const BlogIndex = props => {
             <li key={node.fields.slug}>
               <article>
                 <header>
-                  <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
+                  <Link
+                    style={{ boxShadow: `none` }}
+                    to={node.fields.slug}
+                  >
                     {title}
                   </Link>{' '}
                   {correctIndicator}
@@ -65,7 +72,9 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMarkdownRemark(sort: { fields: [frontmatter___order], order: ASC }) {
+    allMarkdownRemark(
+      sort: { fields: [frontmatter___order], order: ASC }
+    ) {
       edges {
         node {
           excerpt
@@ -74,6 +83,7 @@ export const pageQuery = graphql`
           }
           frontmatter {
             title
+            date
           }
         }
       }

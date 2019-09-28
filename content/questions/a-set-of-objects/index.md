@@ -5,6 +5,7 @@ tags:
   - object
   - spread
 order: 2
+date: '2019-09-27'
 answers:
   - '[{a: 1}, {a: 1}] // correct'
   - '[{a: 1}]'
