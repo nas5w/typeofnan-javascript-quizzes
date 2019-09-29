@@ -20,10 +20,10 @@ const myFunc = str => {
     return myFunc(str.slice(1));
   }
 
-  return console.log(str);
+  return str;
 };
 
-myFunc('Hello world');
+console.log(myFunc('Hello world'));
 ```
 
 <!-- explanation -->
