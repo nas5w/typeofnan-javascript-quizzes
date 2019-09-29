@@ -3,6 +3,7 @@ import { Link } from 'gatsby';
 import { AboutModal } from './modal';
 import { rhythm, scale } from '../utils/typography';
 import { Divider } from 'semantic-ui-react';
+import GitHubButton from 'react-github-btn';
 
 const Layout = props => {
   const [modalOpen, setModalOpen] = useState(false);
@@ -64,9 +65,22 @@ const Layout = props => {
       }}
     >
       <header>{header}</header>
+
       <main>{children}</main>
+
       <footer style={{ fontSize: '14px' }}>
         <Divider />
+        <p>
+          <GitHubButton
+            href="https://github.com/nas5w/typeofnan-javascript-quizzes"
+            data-icon="octicon-star"
+            data-size="large"
+            data-show-count="true"
+            aria-label="Star nas5w/typeofnan-javascript-quizzes on GitHub"
+          >
+            Star
+          </GitHubButton>
+        </p>
         <p>
           JavaScript knowledge quizzes by{' '}
           <strong>Nick Scialli</strong>. Follow me on{' '}

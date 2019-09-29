@@ -5802,6 +5802,11 @@ git-up@4.0.1:
     is-ssh "^1.3.0"
     parse-url "^5.0.0"
 
+github-buttons@^2.2.10:
+  version "2.3.1"
+  resolved "https://registry.yarnpkg.com/github-buttons/-/github-buttons-2.3.1.tgz#61df4d9b6c9b27fe76b29aa4b96faa9e704c96f8"
+  integrity sha512-IUcDmvkJzleWki9I1P9fng+omOGnDx7M/jv/czhngQ2QRaz9YZkKRN3h4U1IHU+yrpY5FCwTqjdBQj0PVouDqw==
+
 github-from-package@0.0.0:
   version "0.0.0"
   resolved "https://registry.yarnpkg.com/github-from-package/-/github-from-package-0.0.0.tgz#97fb5d96bfde8973313f20e8288ef9a167fa64ce"
@@ -10277,6 +10282,13 @@ react-fast-compare@^2.0.2:
   version "2.0.4"
   resolved "https://registry.yarnpkg.com/react-fast-compare/-/react-fast-compare-2.0.4.tgz#e84b4d455b0fec113e0402c329352715196f81f9"
   integrity sha512-suNP+J1VU1MWFKcyt7RtjiSWUjvidmQSlqu+eHslq+342xCbGTYmC0mEhPCOHxlW0CywylOC1u2DFAT+bv4dBw==
+
+react-github-btn@^1.0.6:
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/react-github-btn/-/react-github-btn-1.0.6.tgz#4b5d2de86b2ca791ae113ab424321149966895d8"
+  integrity sha512-E1G8SZpdApiI1/QT0K9/R+nBMjhC/QQtzn9/n8b+VOJx0M34rTjuKJYlJA+G5pP8O0kVLXMBx/H0UkznONOhLg==
+  dependencies:
+    github-buttons "^2.2.10"
 
 react-helmet@^5.2.1:
   version "5.2.1"

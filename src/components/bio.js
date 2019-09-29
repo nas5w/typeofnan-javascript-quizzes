@@ -10,7 +10,10 @@ const Bio = () => {
         fontSize: '14px'
       }}
     >
-      <p>Learn JavaScript fundamentals through fun and challenging quizzes!</p>
+      <p>
+        Learn JavaScript fundamentals through fun and
+        challenging quizzes!
+      </p>
     </div>
   );
 };
