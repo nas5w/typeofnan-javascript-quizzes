@@ -22,7 +22,8 @@ module.exports = {
       options: {
         descriptors: [
           {
-            predicate: node => node.internal.type === `MarkdownRemark`,
+            predicate: node =>
+              node.internal.type === `MarkdownRemark`,
             fields: [
               {
                 name: 'explanation',
@@ -75,7 +76,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        //trackingId: `ADD YOUR TRACKING ID HERE`,
+        trackingId: `UA-106974426-4`
       }
     },
     `gatsby-plugin-feed`,
