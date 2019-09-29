@@ -68,8 +68,14 @@ const Layout = props => {
       <footer style={{ fontSize: '14px' }}>
         <Divider />
         <p>
-          JavaScript knowledge quizzes by <strong>Nick Scialli</strong>. Follow
-          him on <a href={`https://twitter.com/nas5w`}>Twitter</a>!{' '}
+          JavaScript knowledge quizzes by{' '}
+          <strong>Nick Scialli</strong>. Follow me on{' '}
+          <a href={`https://twitter.com/nas5w`}>Twitter</a>!{' '}
+          I also make free{' '}
+          <a href="https://youtube.com/c/typeofnan">
+            YouTube tutorial videos
+          </a>
+          !
         </p>
         <p>
           <button
@@ -85,10 +91,11 @@ const Layout = props => {
         </p>
         <br />
         <p>
-          <strong>Note on answer data persistence: </strong>Your answers to
-          these quiz questions are stored locally in your browser's local
-          storage. This means your answers will likely disappear eventually
-          (e.g., when you clear browser data).
+          <strong>Note on answer data persistence: </strong>
+          Your answers to these quiz questions are stored
+          locally in your browser's local storage. This
+          means your answers will likely disappear
+          eventually (e.g., when you clear browser data).
         </p>
         © {new Date().getFullYear()}, Built with{' '}
         <a href="https://www.gatsbyjs.org">Gatsby</a>
