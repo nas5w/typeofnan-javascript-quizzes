@@ -2,6 +2,8 @@
 
 Learn JavaScript fundamentals through fun and challenging quizzes!
 
+View the app online here: [https://quiz.typeofnan.dev](https://quiz.typeofnan.dev)
+
 # Contributing
 
 I invite you to contribute to this repository! You can do so by opening an issue, or by directly contributing questions.
