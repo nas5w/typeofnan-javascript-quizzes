@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { Link } from 'gatsby';
 import { AboutModal } from './modal';
 import { rhythm, scale } from '../utils/typography';
@@ -7,10 +7,15 @@ import GitHubButton from 'react-github-btn';
 
 const Layout = props => {
   const [modalOpen, setModalOpen] = useState(false);
-
+  const headerRef = useRef();
   const { location, title, children } = props;
   const rootPath = `${__PATH_PREFIX__}/`;
   let header;
+
+  useEffect(() => {
+    location.pathname !== '/' &&
+      headerRef.current.scrollIntoView();
+  }, [location]);
 
   if (location.pathname === rootPath) {
     header = (
@@ -66,7 +71,7 @@ const Layout = props => {
     >
       <header>{header}</header>
 
-      <main>{children}</main>
+      <main ref={headerRef}>{children}</main>
 
       <footer style={{ fontSize: '14px' }}>
         <Divider />
