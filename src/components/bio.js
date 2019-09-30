@@ -12,7 +12,11 @@ const Bio = () => {
     >
       <p>
         Learn JavaScript fundamentals through fun and
-        challenging quizzes!
+        challenging quizzes!{' '}
+        <a href="https://github.com/nas5w/typeofnan-javascript-quizzes">
+          Star this repo on Github
+        </a>{' '}
+        to follow along as new questions are added!
       </p>
     </div>
   );
