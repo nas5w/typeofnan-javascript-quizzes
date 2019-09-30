@@ -12,7 +12,7 @@ answers:
   - '4 3'
 ---
 
-In the following problem, we use the `Set` obect and spread operator to create a new array. What gets logged (to consider: Are items forced to be unique? Are they sorted?)
+In the following problem, we use the `Set` object and spread operator to create a new array. What gets logged (to consider: Are items forced to be unique? Are they sorted?)
 
 ```javascript
 const arr = [...new Set([3, 1, 2, 3, 4])];
