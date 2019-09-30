@@ -130,7 +130,7 @@ const QuestionTemplate = props => {
                       submittedAnswer !== null && (
                         <React.Fragment>
                           {' '}
-                          <i class="long arrow alternate left icon"></i>
+                          <i className="long arrow alternate left icon"></i>
                           CORRECT ANSWER
                         </React.Fragment>
                       )}
