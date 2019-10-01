@@ -4,13 +4,30 @@ import { AboutModal } from './modal';
 import { rhythm, scale } from '../utils/typography';
 import { Divider } from 'semantic-ui-react';
 import GitHubButton from 'react-github-btn';
+import { shouldRenderContributor } from '../utils/shouldRenderContributor';
 
 const Layout = props => {
   const [modalOpen, setModalOpen] = useState(false);
+  const [contributors, setContributors] = useState([]);
   const headerRef = useRef();
   const { location, title, children } = props;
   const rootPath = `${__PATH_PREFIX__}/`;
   let header;
+
+  useEffect(() => {
+    fetch(
+      'https://api.github.com/repos/nas5w/typeofnan-javascript-quizzes/contributors'
+    )
+      .then(res => res.json())
+      .then(users => {
+        setContributors(
+          users.filter(user =>
+            shouldRenderContributor(user.id)
+          )
+        );
+      })
+      .catch(err => console.error(err));
+  }, []);
 
   useEffect(() => {
     location.pathname !== '/' &&
@@ -108,6 +125,35 @@ const Layout = props => {
             closeModal={() => setModalOpen(false)}
           />
         </p>
+        <h3>Contributors</h3>
+        <p>
+          Thanks to these awesome contributors for helping
+          out with tasks ranging from adding questions to
+          fixing typos. If you have time to help out, please
+          consider{' '}
+          <a href="https://github.com/nas5w/typeofnan-javascript-quizzes#contributing">
+            contributing!
+          </a>
+        </p>
+        <div>
+          {contributors.map(
+            ({ login, avatar_url, html_url }) => (
+              <a
+                href={html_url}
+                style={{ boxShadow: 'none' }}
+              >
+                <img
+                  alt={login}
+                  src={avatar_url}
+                  style={{
+                    width: '15%',
+                    margin: '0 10px 10px 0'
+                  }}
+                />
+              </a>
+            )
+          )}
+        </div>
         <br />
         <p>
           <strong>Note on answer data persistence: </strong>
