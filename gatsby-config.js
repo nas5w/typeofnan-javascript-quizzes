@@ -4,6 +4,7 @@ module.exports = {
     author: `Nick Scialli`,
     description: `JavaScript quizes to hone your skills`,
     siteUrl: `https://quiz.typeofnan.dev`,
+    image: '/images/js-quiz.jpeg',
     social: {
       twitter: `nas5w`
     }
