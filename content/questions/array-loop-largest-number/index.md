@@ -1,5 +1,5 @@
 ---
-title: For Loop
+title: Largest Number in an Array
 tags:
   - function
   - array
