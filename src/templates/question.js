@@ -12,6 +12,7 @@ import {
 import { Button, Form, Grid } from 'semantic-ui-react';
 import correctBg from './correct.png';
 import incorrectBg from './incorrect.png';
+import { gaTrackAnswer } from '../utils/gaAnswerTracking';
 
 const QuestionTemplate = props => {
   const post = props.data.markdownRemark;
@@ -114,9 +115,9 @@ const QuestionTemplate = props => {
                     name="answer"
                     value={answer}
                     id={answer}
-                    onClick={() =>
-                      setSelectedAnswer(answer)
-                    }
+                    onClick={() => {
+                      setSelectedAnswer(answer);
+                    }}
                     checked={selectedAnswer === answer}
                     disabled={submittedAnswer !== null}
                   />
@@ -148,9 +149,14 @@ const QuestionTemplate = props => {
                 }
                 fluid
                 size="large"
-                onClick={() =>
-                  setSubmittedAnswer(selectedAnswer)
-                }
+                onClick={() => {
+                  gaTrackAnswer(
+                    title,
+                    selectedAnswer,
+                    correct
+                  );
+                  setSubmittedAnswer(selectedAnswer);
+                }}
                 disabled={
                   selectedAnswer === null ||
                   submittedAnswer !== null
