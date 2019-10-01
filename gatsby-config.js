@@ -2,9 +2,9 @@ module.exports = {
   siteMetadata: {
     title: `TypeOfNaN JavaScript Quizzes`,
     author: `Nick Scialli`,
-    description: `JavaScript quizes to hone your skills`,
+    description: `Learn JavaScript fundamentals through fun and challenging quizzes!`,
     siteUrl: `https://quiz.typeofnan.dev`,
-    image: '/images/js-quiz.jpeg',
+    image: '/js-quiz.jpeg',
     social: {
       twitter: `nas5w`
     }
