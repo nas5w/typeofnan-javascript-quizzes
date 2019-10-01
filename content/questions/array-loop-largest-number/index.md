@@ -4,19 +4,16 @@ tags:
   - function
   - array
   - loop
-order: 15
+order: 22
 date: '2019-10-01'
 answers:
-  - '100'
-  - '0'
-  - '99'
+  - 'Yes'
+  - 'No // correct'
 ---
 
-What is the result of this for loop when passed 'array'?
+Will the following function always return the largest number in an array?
 
 ```javascript
-const array = [-1,0,3,100,99,2,99]
-
 function biggestNumberInArray(arr) {
   let highest = 0;
   for (let i = 0; i < arr.length; i++) {
@@ -24,10 +21,10 @@ function biggestNumberInArray(arr) {
       highest = arr[i];
     }
   }
-  return highest
+  return highest;
 }
 ```
 
 <!-- explanation -->
 
-Function which runs a loop on the array, compares the element vs the highest number currently selected and replaces if the number is higher. 
+This function will work fine for arrays where at least one value is `0` or greater; however, it will fail if all numbers are below `0`. This is because the `highest` variable starts at `0` even if `0` is higher than all array elements.
