@@ -3,7 +3,7 @@ title: Map letters to numbers
 tags:
   - array
   - map
-order: 23
+order: 24
 date: '2019-10-01'
 answers:
   - '1, 2, 3'
@@ -24,4 +24,4 @@ console.log(result);
 
 <!-- explanation -->
 
-A `map` will iterate over each item in a list replacing the item with some returned value. In this example, each letter is replaced by a corresponding object's key value pair.
+The `map` method will create a new array from an existing array by performing a specified transformation on each array item. In this example, each letter is replaced by a corresponding object's value.
