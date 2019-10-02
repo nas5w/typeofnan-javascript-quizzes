@@ -17,9 +17,9 @@ When setting variables equal to each other and then changing one of them, does i
 
 ```javascript
 let a1 = {
-    name: 'Johnny',
-    hobby: 'football'
-}
+  name: 'Johnny',
+  hobby: 'football'
+};
 
 let b1 = 'Lisa prefers Johnny';
 
