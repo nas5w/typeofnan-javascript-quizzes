@@ -7,10 +7,10 @@ tags:
 order: 24
 date: '2019-10-02'
 answers:
-  - 'football, \'Lisa prefers Johnny\', Chris R'
-  - 'roofsitting, \'Lisa prefers Mark\', Doggy'
-  - 'roofsitting, \'Lisa prefers Johnny\', Doggy // correct'
-  - 'football, \'Lisa prefers Mark\', Chris R'
+  - 'football, "Lisa prefers Johnny", Chris R'
+  - 'roofsitting, "Lisa prefers Mark", Doggy'
+  - 'roofsitting, "Lisa prefers Johnny", Doggy // correct'
+  - 'football, "Lisa prefers Mark", Chris R'
 ---
 
 When setting variables equal to each other and then changing one of them, does it change the other? Consider the following code. What is logged?
@@ -40,4 +40,4 @@ console.log(c1[2]);
 
 <!-- explanation -->
 
-All JavaScript variables are passed by value - technically. For arrays, functions, and objects, the value is a reference to the original object. When changing properties of that object, the changes are reflected in the original. However, changing the value of a primitive data type such as string (or numnber, or boolean) does not change the original variable, as shown in `b1`'s value.
+All JavaScript variables are passed by value - technically. For arrays, functions, and objects, the value is a reference to the original object. When changing properties of that object, the changes are reflected in the original. However, changing the value of a primitive data type such as string (or number, or boolean) does not change the original variable, as shown in `b1`'s value.
