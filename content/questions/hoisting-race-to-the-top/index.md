@@ -63,7 +63,7 @@ immaBeOnTop = function() {
 };
 ```
 
-The answer is `3 4` for the second question. While duplicate var declarations are ignored, subsequent function declarations and variable assignments do override previous ones. So what's happening with the code above is:
+The answer is `3 2` for the second question. While duplicate var declarations are ignored, subsequent function declarations and variable assignments do override previous ones. So what's happening with the code above is:
 
 ```javascript
 function foo() {
