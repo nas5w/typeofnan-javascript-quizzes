@@ -14,7 +14,7 @@ answers:
 Will the following function always return the largest number in an array?
 
 ```javascript
-function biggestNumberInArray(arr) {
+function largestNumberInArray(arr) {
   let highest = 0;
   for (let i = 0; i < arr.length; i++) {
     if (highest < arr[i]) {
