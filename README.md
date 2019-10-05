@@ -4,6 +4,31 @@ Learn JavaScript fundamentals through fun and challenging quizzes!
 
 View the app online here: [https://quiz.typeofnan.dev](https://quiz.typeofnan.dev)
 
+# Getting Start
+
+First you must clone this repository in your machine
+
+```
+git clone https://github.com/nas5w/typeofnan-javascript-quizzes.git
+```
+
+Enter the folder project
+```
+cd typeofnan-javascript-quizzes
+```
+
+Run this command for install dependency of project
+```
+yarn install
+```
+
+After install dependency run this command for start project
+```
+npm start
+```
+
+And go to you browser and navigate to page [http://localhost:8000/](http://localhost:8000/)
+
 # Contributing
 
 I invite you to contribute to this repository! You can do so by opening an issue, or by directly contributing questions.
