@@ -5,10 +5,10 @@ tags:
 order: 25
 date: '2019-10-03'
 answers:
-  - 'second 3 3'
+  - 'second 1 3'
   - 'first 3 2 // correct'
   - 'second 3 3'
-  - 'first 1 3'
+  - 'first 3 3'
 ---
 
 Consider the following declarations and expression. What gets logged?
