@@ -1,12 +1,15 @@
-![TypeOfNaN JavaScript Quizzes](typeOfNaN-logo.jpg 'TypeOfNaN JavaScript Quizzes')
-
-[![GitHub issues](https://img.shields.io/github/issues/nas5w/typeofnan-javascript-quizzes)](https://github.com/nas5w/typeofnan-javascript-quizzes/issues) [![GitHub forks](https://img.shields.io/github/forks/nas5w/typeofnan-javascript-quizzes)](https://github.com/nas5w/typeofnan-javascript-quizzes/network) [![GitHub stars](https://img.shields.io/github/stars/nas5w/typeofnan-javascript-quizzes)](https://github.com/nas5w/typeofnan-javascript-quizzes/stargazers) [![GitHub license](https://img.shields.io/github/license/nas5w/typeofnan-javascript-quizzes)](https://github.com/nas5w/typeofnan-javascript-quizzes/blob/master/LICENSE)
+<div align="center">
+<img src="https://raw.githubusercontent.com/nas5w/typeofnan-javascript-quizzes/master/typeOfNaN-logo.jpg" alt="TypeOfNaN JavaScript Quizzes" />
 
 Learn JavaScript fundamentals through fun and challenging quizzes! :smiley:
 
-View the app online here: :point_right: [https://quiz.typeofnan.dev](https://quiz.typeofnan.dev)
+View the app: :point_right: [https://quiz.typeofnan.dev](https://quiz.typeofnan.dev)
+</div>
 
-  
+<hr />
+
+[![GitHub issues](https://img.shields.io/github/issues/nas5w/typeofnan-javascript-quizzes)](https://github.com/nas5w/typeofnan-javascript-quizzes/issues) [![GitHub forks](https://img.shields.io/github/forks/nas5w/typeofnan-javascript-quizzes)](https://github.com/nas5w/typeofnan-javascript-quizzes/network) [![GitHub stars](https://img.shields.io/github/stars/nas5w/typeofnan-javascript-quizzes)](https://github.com/nas5w/typeofnan-javascript-quizzes/stargazers) [![GitHub license](https://img.shields.io/github/license/nas5w/typeofnan-javascript-quizzes)](https://github.com/nas5w/typeofnan-javascript-quizzes/blob/master/LICENSE)
+
 # How to run the app locally
 
 In order to use this app locally, the package manager _yarn_ needs to be installed
@@ -17,23 +20,17 @@ If you don't have it installed yet, head over to:
 
 and install the latest yarn version for your system.
 
-  
-
 ### 1. Clone the repo  
 
 :horse_racing: Run this command to clone the repo:
 
-`git clone https://github.com/nas5w/typeofnan-javascript-quizzes`
-
-  
+`git clone https://github.com/nas5w/typeofnan-javascript-quizzes`  
 
 ### 2. Install dependencies
 
 First, before you can use the app, you have to run this command to install all the dependencies:
 
 `yarn install`
-
-  
 
 ### 3. Start and view the app :eyes:
 
