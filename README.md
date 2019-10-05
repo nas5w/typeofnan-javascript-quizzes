@@ -1,6 +1,6 @@
 ![TypeOfNaN JavaScript Quizzes](typeOfNaN-logo.jpg 'TypeOfNaN JavaScript Quizzes')
 
-https://img.shields.io/github/issues/nas5w/typeofnan-javascript-quizzes https://img.shields.io/github/forks/nas5w/typeofnan-javascript-quizzes https://img.shields.io/github/stars/nas5w/typeofnan-javascript-quizzes https://img.shields.io/github/license/nas5w/typeofnan-javascript-quizzes
+[![GitHub issues](https://img.shields.io/github/issues/nas5w/typeofnan-javascript-quizzes)](https://github.com/nas5w/typeofnan-javascript-quizzes/issues)[![GitHub forks](https://img.shields.io/github/forks/nas5w/typeofnan-javascript-quizzes)](https://github.com/nas5w/typeofnan-javascript-quizzes/network)[![GitHub stars](https://img.shields.io/github/stars/nas5w/typeofnan-javascript-quizzes)](https://github.com/nas5w/typeofnan-javascript-quizzes/stargazers)[![GitHub license](https://img.shields.io/github/license/nas5w/typeofnan-javascript-quizzes)](https://github.com/nas5w/typeofnan-javascript-quizzes/blob/master/LICENSE)
 
 Learn JavaScript fundamentals through fun and challenging quizzes! :smiley:
 
