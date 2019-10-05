@@ -1,11 +1,10 @@
 <div align="center">
-![TypeOfNaN JavaScript Quizzes](typeOfNaN-logo.jpg 'TypeOfNaN JavaScript Quizzes')
+<img src="https://raw.githubusercontent.com/nas5w/typeofnan-javascript-quizzes/master/typeOfNaN-logo.jpg" alt="TypeOfNaN JavaScript Quizzes" />
 
 Learn JavaScript fundamentals through fun and challenging quizzes! :smiley:
 
 View the app: :point_right: [https://quiz.typeofnan.dev](https://quiz.typeofnan.dev)
 </div>
-
 
 <hr />
 
@@ -21,23 +20,17 @@ If you don't have it installed yet, head over to:
 
 and install the latest yarn version for your system.
 
-  
-
 ### 1. Clone the repo  
 
 :horse_racing: Run this command to clone the repo:
 
-`git clone https://github.com/nas5w/typeofnan-javascript-quizzes`
-
-  
+`git clone https://github.com/nas5w/typeofnan-javascript-quizzes`  
 
 ### 2. Install dependencies
 
 First, before you can use the app, you have to run this command to install all the dependencies:
 
 `yarn install`
-
-  
 
 ### 3. Start and view the app :eyes:
 
