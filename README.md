@@ -1,5 +1,7 @@
 ![TypeOfNaN JavaScript Quizzes](typeOfNaN-logo.jpg 'TypeOfNaN JavaScript Quizzes')
 
+https://img.shields.io/github/issues/nas5w/typeofnan-javascript-quizzes https://img.shields.io/github/forks/nas5w/typeofnan-javascript-quizzes https://img.shields.io/github/stars/nas5w/typeofnan-javascript-quizzes https://img.shields.io/github/license/nas5w/typeofnan-javascript-quizzes
+
 Learn JavaScript fundamentals through fun and challenging quizzes! :smiley:
 
 View the app online here: :point_right: [https://quiz.typeofnan.dev](https://quiz.typeofnan.dev)
@@ -11,7 +13,7 @@ In order to use this app locally, the package manager _yarn_ needs to be install
 
 If you don't have it installed yet, head over to:
 
-:point_right:[https://yarnpkg.com/en/docs/install](https://yarnpkg.com/en/docs/install)
+:point_right: [https://yarnpkg.com/en/docs/install](https://yarnpkg.com/en/docs/install)
 
 and install the latest yarn version for your system.
 
