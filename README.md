@@ -21,7 +21,7 @@ and install the latest yarn version for your system.
 
 ### 1. Clone the repo  
 
-:horse_racing: Run this command to clone the repo
+:horse_racing: Run this command to clone the repo:
 
 `git clone https://github.com/nas5w/typeofnan-javascript-quizzes`
 
@@ -29,7 +29,7 @@ and install the latest yarn version for your system.
 
 ### 2. Install dependencies
 
-First, before you can use the app, you have to run this command to install all the dependencies
+First, before you can use the app, you have to run this command to install all the dependencies:
 
 `yarn install`
 
@@ -37,11 +37,11 @@ First, before you can use the app, you have to run this command to install all t
 
 ### 3. Start and view the app :eyes:
 
-After you've installed all the dependencies, run this command to start the app
+After you've installed all the dependencies, run this command to start the app:
 
 `yarn start`   :horse_racing:
 
-Then open, in your browser, this link `http://localhost:8000/` to view it! :tada: :tada:
+Then, in your browser, open http://localhost:8000/ to view it! :tada: :tada:
 
   
 
