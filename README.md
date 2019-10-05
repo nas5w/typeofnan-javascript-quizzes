@@ -24,7 +24,7 @@ yarn install
 
 After install dependency run this command for start project
 ```
-npm start
+yarn start
 ```
 
 And go to you browser and navigate to page [http://localhost:8000/](http://localhost:8000/)
