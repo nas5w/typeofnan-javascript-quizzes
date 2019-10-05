@@ -137,8 +137,9 @@ const Layout = props => {
         </p>
         <div>
           {contributors.map(
-            ({ login, avatar_url, html_url }) => (
+            ({ login, avatar_url, html_url, id }) => (
               <a
+                key={id}
                 href={html_url}
                 style={{ boxShadow: 'none' }}
               >
