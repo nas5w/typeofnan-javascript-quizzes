@@ -43,7 +43,7 @@ Then open, in your browser, this link `http://localhost:8000/` to view it! :tada
 
   
 
-# Contributing back 
+# Contributing 
 
   I invite you to contribute to this repository! You can do so by opening an issue, or by directly contributing questions.
 
