@@ -1,45 +1,59 @@
-![TypeOfNaN JavaScript Quizzes](typeOfNaN-logo.jpg 'TypeOfNaN JavaScript Quizzes')
-___
-Learn JavaScript fundamentals through fun and challenging quizzes!
+<div align="center">
+<img src="https://raw.githubusercontent.com/nas5w/typeofnan-javascript-quizzes/master/typeOfNaN-logo.jpg" alt="TypeOfNaN JavaScript Quizzes" />
 
-View the app online here: [https://quiz.typeofnan.dev](https://quiz.typeofnan.dev)
+Learn JavaScript fundamentals through fun and challenging quizzes! :smiley:
 
-# :rocket: How to run the app locally 
+View the app: :point_right: [https://quiz.typeofnan.dev](https://quiz.typeofnan.dev)
+</div>
 
-In order to use this app locally, the package manager _yarn_ **needs to be installed**
+<hr />
+
+[![GitHub issues](https://img.shields.io/github/issues/nas5w/typeofnan-javascript-quizzes)](https://github.com/nas5w/typeofnan-javascript-quizzes/issues) [![GitHub forks](https://img.shields.io/github/forks/nas5w/typeofnan-javascript-quizzes)](https://github.com/nas5w/typeofnan-javascript-quizzes/network) [![GitHub stars](https://img.shields.io/github/stars/nas5w/typeofnan-javascript-quizzes)](https://github.com/nas5w/typeofnan-javascript-quizzes/stargazers) [![GitHub license](https://img.shields.io/github/license/nas5w/typeofnan-javascript-quizzes)](https://github.com/nas5w/typeofnan-javascript-quizzes/blob/master/LICENSE)
+
+# :rocket: How to run the app locally
+
+In order to use this app locally, the package manager _yarn_ needs to be installed
 
 If you don't have it installed yet, head over to:
-[https://yarnpkg.com/en/docs/install](https://yarnpkg.com/en/docs/install)
-and install the latest yarn version for your system.
-___
-### 1. Clone the repo
 
-- Run this command to clone the repo
-`git clone https://github.com/nas5w/typeofnan-javascript-quizzes`
+:point_right: [https://yarnpkg.com/en/docs/install](https://yarnpkg.com/en/docs/install)
+
+and install the latest yarn version for your system.
+
+### 1. Clone the repo  
+
+:horse_racing: Run this command to clone the repo:
+
+`git clone https://github.com/nas5w/typeofnan-javascript-quizzes`  
 
 ### 2. Install dependencies
 
-- First, before you can use the app, you have to run this command to install all the dependencies
+First, before you can use the app, you have to run this command to install all the dependencies:
+
 `yarn install`
 
-### 3. Start and view the app
+### 3. Start and view the app :eyes:
 
- - After you've installed all the dependencies, run this command to start the app
-`yarn start`
-___
-Then open, in your browser, this link `http://localhost:8000/` to view it!
+After you've installed all the dependencies, run this command to start the app:
 
-# :construction: Contributing
+`yarn start`   :horse_racing:
 
-I invite you to contribute to this repository! You can do so by opening an issue, or by directly contributing questions.
+Then, in your browser, open http://localhost:8000/ to view it! :tada: :tada:
+
+  
+
+# :construction: Contributing 
+
+  I invite you to contribute to this repository! You can do so by opening an issue, or by directly contributing questions.
 
 To directly contribute a quiz question, do the following:
 
-1. Fork the repository
+1. Fork the repository :fork_and_knife:
 2. Add a new folder under `content/questions/`
 3. Follow the patterns used in other questions in `content/questions`
 
-If you have any questions, let me know!
+  
+If you have any questions, let me know!  
 
 # :clipboard: About the app
 
