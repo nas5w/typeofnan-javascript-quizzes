@@ -1,12 +1,16 @@
+<div align="center">
 ![TypeOfNaN JavaScript Quizzes](typeOfNaN-logo.jpg 'TypeOfNaN JavaScript Quizzes')
-
-[![GitHub issues](https://img.shields.io/github/issues/nas5w/typeofnan-javascript-quizzes)](https://github.com/nas5w/typeofnan-javascript-quizzes/issues) [![GitHub forks](https://img.shields.io/github/forks/nas5w/typeofnan-javascript-quizzes)](https://github.com/nas5w/typeofnan-javascript-quizzes/network) [![GitHub stars](https://img.shields.io/github/stars/nas5w/typeofnan-javascript-quizzes)](https://github.com/nas5w/typeofnan-javascript-quizzes/stargazers) [![GitHub license](https://img.shields.io/github/license/nas5w/typeofnan-javascript-quizzes)](https://github.com/nas5w/typeofnan-javascript-quizzes/blob/master/LICENSE)
 
 Learn JavaScript fundamentals through fun and challenging quizzes! :smiley:
 
-View the app online here: :point_right: [https://quiz.typeofnan.dev](https://quiz.typeofnan.dev)
+View the app: :point_right: [https://quiz.typeofnan.dev](https://quiz.typeofnan.dev)
+</div>
 
-  
+
+<hr />
+
+[![GitHub issues](https://img.shields.io/github/issues/nas5w/typeofnan-javascript-quizzes)](https://github.com/nas5w/typeofnan-javascript-quizzes/issues) [![GitHub forks](https://img.shields.io/github/forks/nas5w/typeofnan-javascript-quizzes)](https://github.com/nas5w/typeofnan-javascript-quizzes/network) [![GitHub stars](https://img.shields.io/github/stars/nas5w/typeofnan-javascript-quizzes)](https://github.com/nas5w/typeofnan-javascript-quizzes/stargazers) [![GitHub license](https://img.shields.io/github/license/nas5w/typeofnan-javascript-quizzes)](https://github.com/nas5w/typeofnan-javascript-quizzes/blob/master/LICENSE)
+
 # How to run the app locally
 
 In order to use this app locally, the package manager _yarn_ needs to be installed
