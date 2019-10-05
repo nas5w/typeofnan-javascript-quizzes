@@ -8,7 +8,7 @@ View the app: :point_right: [https://quiz.typeofnan.dev](https://quiz.typeofnan.
 
 <hr />
 
-[![GitHub issues](https://img.shields.io/github/issues/nas5w/typeofnan-javascript-quizzes)](https://github.com/nas5w/typeofnan-javascript-quizzes/issues) [![GitHub forks](https://img.shields.io/github/forks/nas5w/typeofnan-javascript-quizzes)](https://github.com/nas5w/typeofnan-javascript-quizzes/network) [![GitHub stars](https://img.shields.io/github/stars/nas5w/typeofnan-javascript-quizzes)](https://github.com/nas5w/typeofnan-javascript-quizzes/stargazers) [![GitHub license](https://img.shields.io/github/license/nas5w/typeofnan-javascript-quizzes)](https://github.com/nas5w/typeofnan-javascript-quizzes/blob/master/LICENSE)
+[![GitHub issues](https://img.shields.io/github/issues/nas5w/typeofnan-javascript-quizzes)](https://github.com/nas5w/typeofnan-javascript-quizzes/issues) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com) [![GitHub forks](https://img.shields.io/github/forks/nas5w/typeofnan-javascript-quizzes)](https://github.com/nas5w/typeofnan-javascript-quizzes/network) [![GitHub stars](https://img.shields.io/github/stars/nas5w/typeofnan-javascript-quizzes)](https://github.com/nas5w/typeofnan-javascript-quizzes/stargazers) [![GitHub license](https://img.shields.io/github/license/nas5w/typeofnan-javascript-quizzes)](https://github.com/nas5w/typeofnan-javascript-quizzes/blob/master/LICENSE)
 
 <hr />
 
@@ -42,9 +42,6 @@ After you've installed all the dependencies, run this command to start the app:
 
 Then, in your browser, open http://localhost:8000/ to view it! :tada: :tada:
 
-  
-
-
 # :construction: Contributing 
 
 I invite you to contribute to this repository! You can do so by opening an issue, or by directly contributing questions.
@@ -55,7 +52,7 @@ To directly contribute a quiz question, do the following:
 2. Add a new folder under `content/questions/`
 3. Follow the patterns used in other questions in `content/questions`
 
-  
+
 If you have any questions, let me know!  
 
 # :clipboard: About the app
