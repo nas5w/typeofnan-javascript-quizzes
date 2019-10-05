@@ -10,7 +10,9 @@ View the app: :point_right: [https://quiz.typeofnan.dev](https://quiz.typeofnan.
 
 [![GitHub issues](https://img.shields.io/github/issues/nas5w/typeofnan-javascript-quizzes)](https://github.com/nas5w/typeofnan-javascript-quizzes/issues) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com) [![GitHub forks](https://img.shields.io/github/forks/nas5w/typeofnan-javascript-quizzes)](https://github.com/nas5w/typeofnan-javascript-quizzes/network) [![GitHub stars](https://img.shields.io/github/stars/nas5w/typeofnan-javascript-quizzes)](https://github.com/nas5w/typeofnan-javascript-quizzes/stargazers) [![GitHub license](https://img.shields.io/github/license/nas5w/typeofnan-javascript-quizzes)](https://github.com/nas5w/typeofnan-javascript-quizzes/blob/master/LICENSE)
 
-# How to run the app locally
+<hr />
+
+# :rocket: How to run the app locally
 
 In order to use this app locally, the package manager _yarn_ needs to be installed
 
@@ -40,11 +42,9 @@ After you've installed all the dependencies, run this command to start the app:
 
 Then, in your browser, open http://localhost:8000/ to view it! :tada: :tada:
 
+# :construction: Contributing 
 
-
-# Contributing
-
-  I invite you to contribute to this repository! You can do so by opening an issue, or by directly contributing questions.
+I invite you to contribute to this repository! You can do so by opening an issue, or by directly contributing questions.
 
 To directly contribute a quiz question, do the following:
 
@@ -55,6 +55,6 @@ To directly contribute a quiz question, do the following:
 
 If you have any questions, let me know!  
 
-# About the app
+# :clipboard: About the app
 
 The app was bootstrapped using the `gatsby-starter-blog` template and then massaging it into a format condusive to quizzing. The app is deployed from `master` to Netlify.
