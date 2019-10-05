@@ -1,5 +1,5 @@
 ---
-title: Largest Number in an Array
+title: Greatest Number in an Array
 tags:
   - function
   - array
@@ -11,7 +11,7 @@ answers:
   - 'No // correct'
 ---
 
-Will the following function always return the largest number in an array?
+Will the following function always return the greatest number in an array?
 
 ```javascript
 function greatestNumberInArray(arr) {
