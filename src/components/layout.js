@@ -16,7 +16,7 @@ const Layout = props => {
 
   useEffect(() => {
     fetch(
-      'https://api.github.com/repos/nas5w/typeofnan-javascript-quizzes/contributors'
+      'https://api.github.com/repos/nas5w/typeofnan-javascript-quizzes/contributors?per_page=1000'
     )
       .then(res => res.json())
       .then(users => {
