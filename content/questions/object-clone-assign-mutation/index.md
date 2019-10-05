@@ -1,10 +1,10 @@
 ---
-title: Object Cloning (Object.assign)
+title: Object Cloning (Object.assign) Comparison
 tags:
   - object
   - cloning
   - mutation
-order: 28
+order: 30
 date: '2019-10-05'
 answers:
   - 'Joe Nested aReturn'
