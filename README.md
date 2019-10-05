@@ -17,16 +17,19 @@ and install the latest yarn version for your system.
 ### 1. Clone the repo
 
 Run this command to clone the repo
+
 `git clone https://github.com/nas5w/typeofnan-javascript-quizzes`
 
 ### 2. Install dependencies
 
 The first before you can use the app, you have run this command to install all the dependencies
+
 `yarn install`
 
 ### 3. Start and view the app
 
 After you've installed all the dependencies, run this command to start the app
+
 `yarn start`
 
 Then open, in your browser, this link `http://localhost:8000/` to view it!
