@@ -6,9 +6,9 @@ tags:
 order: 15
 date: '2019-09-29'
 answers:
-  - 'Batman'
-  - 'Superman'
-  - 'Batman Superman // correct'
+  - '"Batman"'
+  - '"Superman"'
+  - '"BatmanSuperman" // correct'
   - 'Nothing gets logged'
 ---
 
