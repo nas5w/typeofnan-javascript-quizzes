@@ -8,7 +8,7 @@ date: '2019-10-05'
 answers:
   - 'true true true true'
   - 'true true true false'
-  - 'true true false true' //correct
+  - 'true true false true' // correct
   - 'false false false false'
 
 ---
