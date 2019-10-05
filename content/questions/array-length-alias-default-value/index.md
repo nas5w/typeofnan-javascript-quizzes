@@ -53,4 +53,4 @@ const { length: ln, [ln - 1]: domain = 'quiz' } = [
 
 In this destructuring, we use _aliasing_ to assign the array's `length` property to a variable we call `ln`. Next, we use aliasing again to assign the `ln - 1`th element to the `domain` variable. The `= 'quiz'` is a default value, meaning `domain` will equal `'quiz'` if there is no `ln - 1`th array element.
 
-Applying this top our array, `length`, which we assign to `ln`, is `3`, `ln - 1` is `2`, and the item at index `2` of our array is `dev`. Therefore, the answer is `dev`!
+Applying this to our array, `length`, which we assign to `ln`, is `3`, `ln - 1` is `2`, and the item at index `2` of our array is `dev`. Therefore, the answer is `dev`!
