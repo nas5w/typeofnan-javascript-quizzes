@@ -19,7 +19,7 @@ Run this command to clone the repo
 
 ### 2. Install dependencies
 
-irst, before you can use the app, you have to run this command to install all the dependencies
+First, before you can use the app, you have to run this command to install all the dependencies
 `yarn install`
 
 ### 3. Start and view the app
