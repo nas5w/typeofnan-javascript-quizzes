@@ -1,5 +1,5 @@
 ---
-title: Largest Number in an Array
+title: Greatest Number in an Array
 tags:
   - function
   - array
@@ -11,20 +11,20 @@ answers:
   - 'No // correct'
 ---
 
-Will the following function always return the largest number in an array?
+Will the following function always return the greatest number in an array?
 
 ```javascript
-function biggestNumberInArray(arr) {
-  let highest = 0;
+function greatestNumberInArray(arr) {
+  let greatest = 0;
   for (let i = 0; i < arr.length; i++) {
-    if (highest < arr[i]) {
-      highest = arr[i];
+    if (greatest < arr[i]) {
+      greatest = arr[i];
     }
   }
-  return highest;
+  return greatest;
 }
 ```
 
 <!-- explanation -->
 
-This function will work fine for arrays where at least one value is `0` or greater; however, it will fail if all numbers are below `0`. This is because the `highest` variable starts at `0` even if `0` is higher than all array elements.
+This function will work fine for arrays where at least one value is `0` or greater; however, it will fail if all numbers are below `0`. This is because the `greatest` variable starts at `0` even if `0` is greater than all array elements.
