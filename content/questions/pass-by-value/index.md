@@ -40,4 +40,5 @@ console.log(c1[2]);
 
 <!-- explanation -->
 
-All JavaScript variables are passed by value - technically. For arrays, functions, and objects, the value is a reference to the original object. When changing properties of that object, the changes are reflected in the original. However, changing the value of a primitive data type such as string (or number, or boolean) does not change the original variable, as shown in `b1`'s value.
+Because `a2` and `c2` refer to the same objects in memory as `a1` and `c1`, when their properties `hobby` and `[2]` were changed, those changes could also be seen through `a1` and `c1`.  The change made to `b2` was not changing a property, rather, replacing the `b2` variable itself.  Replacing a variable with a new value has no effect on the original value so `b1` remained unchanged.
+
