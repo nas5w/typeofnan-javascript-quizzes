@@ -68,7 +68,7 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing \""
   },
   "engines": {
-    "yarn": "^1.17.3",
+    "yarn": "^1.17.0",
     "node": ">=6.11.5"
   }
 }
