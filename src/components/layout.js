@@ -150,7 +150,7 @@ const Layout = props => {
                   alt={login}
                   src={avatar_url}
                   style={{
-                    width: '15%',
+                    width: '10%',
                     margin: '0 10px 10px 0'
                   }}
                 />
