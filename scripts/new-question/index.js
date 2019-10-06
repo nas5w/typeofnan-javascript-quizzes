@@ -9,7 +9,6 @@ function getDirectories(path) {
 
 function init() {
   const agrs = process.argv.slice(2);
-  console.log(agrs);
 
   if (!agrs.length) {
     throw new Error('Please, specify question title');
