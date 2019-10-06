@@ -1,11 +1,11 @@
 {
-  "name": "gatsby-starter-blog",
+  "name": "typeofnan-javascript-quizzes",
   "private": true,
-  "description": "A starter for a blog powered by Gatsby and Markdown",
+  "description": "JavaScript quiz questions and explanations!",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Nick Scialli",
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/nas5w/typeofnan-javascript-quizzes/issues"
   },
   "dependencies": {
     "gatsby": "^2.15.14",
@@ -47,23 +47,28 @@
     "lodash.template": "^4.5.0",
     "prettier": "^1.18.2"
   },
-  "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
+  "homepage": "https://quiz.typeofnan.dev/",
   "keywords": [
-    "gatsby"
+    "gatsby",
+    "javascript"
   ],
   "license": "MIT",
   "main": "n/a",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gatsbyjs/gatsby-starter-blog.git"
+    "url": "https://github.com/nas5w/typeofnan-javascript-quizzes.git"
   },
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "new-question": "node ./scripts/new-question/index.js",
-    "start": "npm run develop",
+    "start": "yarn run develop",
     "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing \""
+  },
+  "engines": {
+    "yarn": "^1.17.3",
+    "node": ">=6.11.5"
   }
 }
