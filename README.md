@@ -40,6 +40,13 @@ After you've installed all the dependencies, run this command to start the app:
 
 Then, in your browser, open http://localhost:8000/ to view it! :tada: :tada:
 
+# RUN OFFLINE 🖥 Through any browser/device.
+You can save the entire quiz app by just using " save page as " option from your browser.
+It will download the quiz in 'web archieve' form.
+Then just open the html file offline, anytime.
+
+Thanks.🙏
+
 # :construction: Contributing 
 
 I invite you to contribute to this repository! You can do so by opening an issue, or by directly contributing questions.
