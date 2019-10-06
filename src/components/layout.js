@@ -24,8 +24,10 @@ const Layout = props => {
       .then(res => res.json())
       .then(users => {
         setContributors(
-          users.filter(user =>
-            shouldRenderContributor(user.id)
+          shuffle(
+            users.filter(user =>
+              shouldRenderContributor(user.id)
+            )
           )
         );
       })
@@ -139,7 +141,7 @@ const Layout = props => {
           </a>
         </p>
         <div>
-          {shuffle(contributors).map(
+          {contributors.map(
             ({ login, avatar_url, html_url, id }) => (
               <a
                 key={id}
