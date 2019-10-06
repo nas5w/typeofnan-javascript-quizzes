@@ -1,5 +1,5 @@
 ---
-title: A Set of Objects
+title: Array Compare
 tags:
   - set
   - object
@@ -7,18 +7,22 @@ tags:
 order: 2
 date: '2019-09-27'
 answers:
-  - '[{a: 1}, {a: 1}] // correct'
-  - '[{a: 1}]'
+  - 'true, true, false // correct'
+  - 'true, true, true'
+  - 'true, false, false'
+  - 'false, false false'
 ---
 
 Consider the following `Set` of objects spread into a new array. What gets logged?
 
 ```javascript
-const mySet = new Set([{ a: 1 }, { a: 1 }]);
-const result = [...mySet];
-console.log(result);
+var a = [1, 2, 3];
+var b = [1, 2, 3];
+var c = '1,2,3';
 ```
 
 <!-- explanation -->
 
-While it's true a `Set` object will remove duplicates, the two values we create our `Set` with are references to different objects in memory, despite having identical key-value pairs. This is the same reason `{ a: 1 } === { a: 1 }` is `false`.
+Two non-primitive values, like objects (including function and array) held by reference, so both == and === comparisons will simply check whether the references match, not anything about the underlying values.
+
+For example, arrays are by default coerced to strings by simply joining all the values with commas (,) in between. So two arrays with the same contents would not be == equal.
