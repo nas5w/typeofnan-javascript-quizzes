@@ -1,9 +1,9 @@
 ---
-title: Equality operetors
+title: Equality and Identity Operators
 tags:
   - operator
   - property
-order: 33
+order: 34
 date: '2019-10-5'
 answers:
   - 'true'
@@ -21,4 +21,6 @@ console.log((a == b) && (a === b));
 
 <!-- explanation -->
 
-The answer is false, (a == b) will come up as true as it does check the type. However, (a === b) will be false as it does check the type. Hence, ((a == b) && (a === b)) will be false.
+The answer is `false`. `a == b` uses the "equality" operator, which will convert the operands to the same type prior to performing the comparison. In this case, `42 == '42'` wil become `42 === 42`, which is `true`.
+
+However, `a === b` uses the "identity" operator, and no such type conversion happens. Therefore, `42 === '42'` is `false`.  Hence, `(a == b) && (a === b)` becomes `true && false`, which is `false`.
