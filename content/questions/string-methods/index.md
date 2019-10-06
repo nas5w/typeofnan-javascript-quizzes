@@ -3,7 +3,7 @@ title: String methods
 tags:
   - String methods
 order: 34
-date: '2019-10-05'
+date: '2019-10-06'
 answers:
   - 'length'
   - 'indexOf()'
