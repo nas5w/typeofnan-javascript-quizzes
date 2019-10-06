@@ -4,7 +4,7 @@ tags:
   - array
   - reference
   - comparison
-order: 31
+order: 36
 date: '2019-10-06'
 answers:
   - 'true, true, false // correct'
@@ -27,6 +27,6 @@ console.log(a == b);
 
 <!-- explanation -->
 
-Two non-primitive values, like objects (including function and array) held by reference, so both == and === comparisons will simply check whether the references match, not anything about the underlying values.
+When comparing either `a` or `b` to `c` using the equality operator (`==`), the JavaScript interpreter will attempt to us the array's built-in `toString` method to first convert the array to a string. For both `a` and `b`, the `a.toString()` method returns `'1,2,3'`. This is strictly equal to `c`, so both `a == c` and `b == c` are `true`!
 
-For example, arrays are by default coerced to strings by simply joining all the values with commas (,) in between. So two arrays with the same contents would not be == equal.
+Two non-primitive values, like objects (including function and array) held by reference, When comparing two objects, so both the equality (`==`) and identity (`===`) operators will simply check whether the references match (not anything about the underlying values). In this case, `a` and `b` are references to different objects in memory, so `a == b` is `false`.
