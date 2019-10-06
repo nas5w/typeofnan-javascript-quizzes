@@ -11,7 +11,7 @@ answers:
   - 'Order not guaranteed'
 ---
 
-What gets logged?
+Consider the following code block. What gets logged?
 
 ```javascript
 const scrambled = { 2: "e", 5: "o", 1: "h", 4: "l", 3: "l" };
