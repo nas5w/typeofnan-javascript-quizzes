@@ -4,7 +4,10 @@ import { AboutModal } from './modal';
 import { rhythm, scale } from '../utils/typography';
 import { Divider } from 'semantic-ui-react';
 import GitHubButton from 'react-github-btn';
-import { shouldRenderContributor } from '../utils/shouldRenderContributor';
+import {
+  shouldRenderContributor,
+  shuffle
+} from '../utils/shouldRenderContributor';
 
 const Layout = props => {
   const [modalOpen, setModalOpen] = useState(false);
@@ -136,7 +139,7 @@ const Layout = props => {
           </a>
         </p>
         <div>
-          {contributors.map(
+          {shuffle(contributors).map(
             ({ login, avatar_url, html_url, id }) => (
               <a
                 key={id}
