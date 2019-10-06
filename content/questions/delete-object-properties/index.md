@@ -1,5 +1,5 @@
 ---
-title: Deleting properties from an object
+title: Deleting Properties from an Object
 tags:
   - object
 order: 33
@@ -11,7 +11,7 @@ answers:
   - 'D'
 ---
 
-How do you delete property `color` from the `car` object?
+Which of the following is a valid way to delete property `color` from the `car` object?
 
 ```javascript
 const car = {
@@ -35,7 +35,7 @@ car.color.delete();
 
 <!-- explanation -->
 
-Use the JavaScript [delete operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/delete) to remove a property from an object.
+You can use the JavaScript [delete operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/delete) to remove a property from an object.
 
 Both option A and D will give TypeError, because neither `car.delete` nor `car.color.delete` is a function.
 
