@@ -4,7 +4,10 @@ import { AboutModal } from './modal';
 import { rhythm, scale } from '../utils/typography';
 import { Divider } from 'semantic-ui-react';
 import GitHubButton from 'react-github-btn';
-import { shouldRenderContributor } from '../utils/shouldRenderContributor';
+import {
+  shouldRenderContributor,
+  shuffle
+} from '../utils/shouldRenderContributor';
 
 const Layout = props => {
   const [modalOpen, setModalOpen] = useState(false);
@@ -21,8 +24,10 @@ const Layout = props => {
       .then(res => res.json())
       .then(users => {
         setContributors(
-          users.filter(user =>
-            shouldRenderContributor(user.id)
+          shuffle(
+            users.filter(user =>
+              shouldRenderContributor(user.id)
+            )
           )
         );
       })
@@ -147,7 +152,7 @@ const Layout = props => {
                   alt={login}
                   src={avatar_url}
                   style={{
-                    width: '15%',
+                    width: '10%',
                     margin: '0 10px 10px 0'
                   }}
                 />
