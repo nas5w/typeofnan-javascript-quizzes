@@ -12,7 +12,7 @@ answers:
   - 'something else  // correct'
 ---
 
-What gets logged?
+Consider the following code block. What gets logged?
 
 ```javascript
 console.log(
