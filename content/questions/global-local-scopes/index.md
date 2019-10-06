@@ -3,7 +3,8 @@ title: Global Local
 tags:
   - variables
   - scope
-order: 1
+  - hoisting
+order: 37
 date: '2019-10-06'
 answers:
   - 5 and 10
@@ -26,7 +27,7 @@ var x = 5;
 
 <!-- explanation -->
 
-This will print out undefined and 10 rather than 5 and 10 since JavaScript always moves variable declarations (not initializations) to the top of the scope, making the code equivalent to:
+This will print out `undefined` and `10`. JavaScript will hoist the `var x` declaration within the function scope, but it will not hoist the initialization. The code is equivalent to:
 
 ```javascript
 var x = 5;
