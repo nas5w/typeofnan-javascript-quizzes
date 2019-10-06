@@ -1,4 +1,5 @@
-const { readdirSync, mkdir, copyFile } = require('fs');
+const { readdirSync, mkdirSync, readFileSync, writeFileSync } = require('fs');
+const template = require('lodash.template');
 const path = require('path');
 
 function getDirectories(path) {
@@ -22,17 +23,17 @@ function init() {
     throw new Error(`Question ${questionName} already exists. Please, specify another name`);
   }
 
-  mkdir(`${srcDir}/${questionName}`, {}, (err) => {
+  mkdirSync(`${srcDir}/${questionName}`, (err) => {
     if (err) throw err;
   });
 
-  copyFile(
-    `${path.dirname(require.main.filename)}/index.md`,
-    `${srcDir}/${questionName}/index.md`,
-    (err) => {
-      if (err) throw err;
-    }
-  );
+  const fileTemplate = readFileSync(`${path.dirname(require.main.filename)}/index.md`, 'utf8');
+  const blankQuestionTmpl = template(fileTemplate);
+
+  writeFileSync(`${srcDir}/${questionName}/index.md`, blankQuestionTmpl({
+    order: existingQuestions.length,
+    date: new Date(),
+  }));
 
   console.info('All done!');
 }

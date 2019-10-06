@@ -52,9 +52,10 @@ Then, in your browser, open http://localhost:8000/ to view it! :tada: :tada:
 To directly contribute a quiz question, do the following:
 
 1. Fork the repository :fork_and_knife:
-2. Add a new folder under `content/questions/`
-3. Follow the patterns used in other questions in `content/questions`
-
+2. In terminal run `yarn install`
+3. For creating new question run `yarn new-question %your_question_name%`
+(Note `%your_question_name%` should be lowercased with words separated with dash `-`)
+4. Open file `index.md` in directory `content/questions/%your_question_name%` and fill all fields.
   
 If you have any questions, let me know!  
 

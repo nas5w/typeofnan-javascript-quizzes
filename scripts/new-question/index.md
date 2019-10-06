@@ -2,8 +2,8 @@
 title: 
 tags:
   - 
-order: 
-date: 
+order: <%= order %>
+date: <%= date %>
 answers: 
   - 
 ---
