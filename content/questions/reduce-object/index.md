@@ -25,7 +25,7 @@ console.log(result);
 
 <!-- explanation -->
 
-Object.values iterates through enumerable number keys in sequential order? This is the reason why the letters appear to sort themselves correctly.
+`Object.values` iterates through enumerable number keys in sequential order. This is the reason why the letters appear to sort themselves correctly.
 
 The reduce method then takes two arguments: a reducer function and an initial value.
 - In this case, our reducer function is `(agg, el) => agg + el` and our initial value is `""`. 
