@@ -1,5 +1,5 @@
 ---
-title: Reduce Array
+title: Reduce Object
 tags:
   - reduce
   - array
