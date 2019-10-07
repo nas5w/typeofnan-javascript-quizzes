@@ -16,7 +16,6 @@ Consider the following recursive function. If we pass the string `"Hello World"`
 
 ```javascript
 var speak = str => {
-
 if (str.length > 1) {
 return speak(str.slice(0,1));
 }
