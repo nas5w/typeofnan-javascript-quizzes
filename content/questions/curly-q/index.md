@@ -16,8 +16,8 @@ What will the `foo()` and `bar()` functions return when logged to the console to
 ```javascript
 const foo = () => {
   return {
-    foo: "foo";
-  }
+    foo: "foo"
+  };
 }
 
 const bar = () => {
@@ -41,8 +41,8 @@ Let's look at both functions and see where JavaScript inserts semicolons:
 ```javascript
 const foo = () => {
   return {
-    foo: "foo";
-  }
+    foo: "foo"
+  };
 }
 ```
 
@@ -53,7 +53,7 @@ so:
 ```javascript
 const foo = () => {
   return {
-    foo: "foo";
+    foo: "foo"
   };
 };
 ```
@@ -64,7 +64,7 @@ However, `bar()` is a little different.
 const bar = () => {
   return;
   {
-    bar: 'bar';
+    bar: "bar"
   }
 };
 ```
@@ -77,7 +77,7 @@ automatically places a semicolon after `return`, like so:
 const bar = () => {
   return;
   {
-    bar: 'bar';
+    bar: "bar"
   }
 };
 ```
