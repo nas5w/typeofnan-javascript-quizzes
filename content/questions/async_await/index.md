@@ -23,7 +23,7 @@ async function f() {
     setTimeout(() => resolve('done!'), 1000);
   });
 
-  let result = await promise;
+  result = await promise;
 
   console.log(result);
 }
