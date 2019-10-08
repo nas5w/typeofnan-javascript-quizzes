@@ -6,8 +6,8 @@ tags:
 order: 10
 date: '2019-10-07'
 answers:
-  - 'Yes // correct'
-  - 'No'
+  - 'Yes'
+  - 'No // correct'
 ---
 
 Consider the two functions below. Will they both return the same thing?
