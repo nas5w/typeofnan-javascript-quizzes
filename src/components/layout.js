@@ -4,6 +4,7 @@ import { AboutModal } from './modal';
 import { rhythm, scale } from '../utils/typography';
 import { Divider } from 'semantic-ui-react';
 import GitHubButton from 'react-github-btn';
+import { clearAllPersistedAnswer } from '../utils/persistAnswers';
 import {
   shouldRenderContributor,
   shuffle
