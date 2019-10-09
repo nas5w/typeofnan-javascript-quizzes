@@ -25,7 +25,7 @@ console.log(domain);
 
 <!-- explanation -->
 
-This question applies a number of difference concepts surounding object destructuring! Let's take it one piece at a time.
+This question applies a number of different concepts surrounding object destructuring! Let's take it one piece at a time.
 
 The following code simply assigns the string `quiz.typeofnan.dev` to the variable `url`.
 
@@ -33,7 +33,7 @@ The following code simply assigns the string `quiz.typeofnan.dev` to the variabl
 const url = 'quiz.typeofnan.dev';
 ```
 
-The next line is where a lot of the action happens. It's generally best to first consider what's happing on the right side of the assignment, so let's first consider the following code:
+The next line is where a lot of the action happens. It's generally best to first consider what's happening on the right side of the assignment, so let's first consider the following code:
 
 ```javascript
 url.split('.').filter(Boolean);
