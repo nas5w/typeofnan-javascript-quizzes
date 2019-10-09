@@ -101,6 +101,7 @@ const Layout = props => {
         window.confirm(
           'Are you sure you want to clear all answers'
         ) && clearAllPersistedAnswer();
+        window.location.reload();
       }}
       className="ui red basic button"
     >
