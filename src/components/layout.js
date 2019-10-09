@@ -97,11 +97,15 @@ const Layout = props => {
       <main ref={headerRef}>{children}</main>
       
       <button
-      className="ui basic green button"
-      onClick={() => clearAllPersistedAnswer() }
+      onClick={() => {
+        window.confirm(
+          'Are you sure you want to clear all answers'
+        ) && clearAllPersistedAnswer();
+      }}
+      className="ui red basic button"
     >
-      Clear all progress
-    </button> 
+      Destroy all Evidence
+    </button>
 
 
       <footer style={{ fontSize: '14px' }}>
