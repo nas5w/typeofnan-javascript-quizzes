@@ -98,7 +98,7 @@ const Layout = props => {
       
       <button
       className="ui basic green button"
-      onClick={() => clearAllPersistedAnswer }
+      onClick={() => clearAllPersistedAnswer() }
     >
       Clear all progress
     </button> 
