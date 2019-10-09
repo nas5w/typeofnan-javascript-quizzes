@@ -105,7 +105,7 @@ const Layout = props => {
       }}
       className="ui red basic button"
     >
-      Destroy all Evidence
+      Reset all answers
     </button>
 
 
