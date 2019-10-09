@@ -58,10 +58,9 @@ const Layout = props => {
                     color: `inherit`
                 }
             }
-            to = { `/` } >
-            { title } <
-            /Link> <
-            /h1>
+            to = { `/` } > { title } <
+            /Link> < /
+            h1 >
         );
     } else {
         header = ( <
@@ -78,10 +77,9 @@ const Layout = props => {
                     color: `inherit`
                 }
             }
-            to = { `/` } >
-            { title } <
-            /Link> <
-            /h3>
+            to = { `/` } > { title } <
+            /Link> < /
+            h3 >
         );
     }
     return ( <
@@ -100,14 +98,16 @@ const Layout = props => {
         main ref = { headerRef } > { children } < /main> <
         button className = "ui basic green button"
         onClick = {
-            () => clearAllPersistedAnswer } >
+            () => clearAllPersistedAnswer
+        } >
         Clear all progress <
         /button> 
 
 
         <
         footer style = {
-            { fontSize: '14px' } } >
+            { fontSize: '14px' }
+        } >
         <
         Divider / >
         <
@@ -119,8 +119,8 @@ const Layout = props => {
         data - show - count = "true"
         aria - label = "Star nas5w/typeofnan-javascript-quizzes on GitHub" >
         Star <
-        /GitHubButton> <
-        /p> <
+        /GitHubButton> < /
+        p > <
         p >
         JavaScript knowledge quizzes by { ' ' } <
         strong > Nick Scialli < /strong>. Follow me on{' '} <
@@ -128,21 +128,22 @@ const Layout = props => {
         I also make free { ' ' } <
         a href = "https://youtube.com/c/typeofnan" >
         YouTube tutorial videos <
-        /a>!
-        <
+        /a>! <
         /p> <
         p >
         <
         button className = "ui basic green button"
         onClick = {
-            () => setModalOpen(true) } >
+            () => setModalOpen(true)
+        } >
         Read why I make these quizzes & raquo; <
         /button> <
         AboutModal modalIsOpen = { modalOpen }
         closeModal = {
-            () => setModalOpen(false) }
-        /> <
-        /p> <
+            () => setModalOpen(false)
+        }
+        /> < /
+        p > <
         h3 > Contributors < /h3> <
         p >
         Thanks to these awesome contributors
@@ -150,15 +151,16 @@ const Layout = props => {
         a href = "https://github.com/nas5w/typeofnan-javascript-quizzes#contributing" >
         contributing!
         <
-        /a> <
-        /p> <
+        /a> < /
+        p > <
         div > {
             contributors.map(
                 ({ login, avatar_url, html_url, id }) => ( <
                     a key = { id }
                     href = { html_url }
                     style = {
-                        { boxShadow: 'none' } } >
+                        { boxShadow: 'none' }
+                    } >
                     <
                     img alt = { login }
                     src = { avatar_url }
@@ -168,8 +170,8 @@ const Layout = props => {
                             margin: '0 10px 10px 0'
                         }
                     }
-                    /> <
-                    /a>
+                    /> < /
+                    a >
                 )
             )
         } <
@@ -182,8 +184,8 @@ const Layout = props => {
         Your answers to these quiz questions are stored locally in your browser 's local storage. This
         means your answers will likely disappear eventually(e.g., when you clear browser data). <
         /p>© { new Date().getFullYear() }, Built with { ' ' } <
-        a href = "https://www.gatsbyjs.org" > Gatsby < /a> <
-        /footer> <
+        a href = "https://www.gatsbyjs.org" > Gatsby < /a> < /
+        footer > <
         /div>
     );
 };
