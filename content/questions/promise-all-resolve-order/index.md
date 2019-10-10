@@ -29,4 +29,4 @@ const all = Promise.all([
 
 <!-- explanation -->
 
-The order in which the Promises resolves does not matter to `Promise.all`. We can reliably count on them returning in the same array order in which they were provided.
+The order in which the Promises resolve does not matter to `Promise.all`. We can reliably count on them to be returned in the same order in which they were provided in the array argument.
