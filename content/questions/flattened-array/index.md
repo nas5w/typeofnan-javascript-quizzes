@@ -4,7 +4,7 @@ tags:
   - array
   - es2019
   - flat
-order: 2
+order: 47
 date: '2019-10-10'
 answers:
   - '[1, 2, 3, 4, 5, 6, [7], 8, 9, 10, 12] // correct'
