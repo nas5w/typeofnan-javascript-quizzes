@@ -35,4 +35,4 @@ console.log(
 
 <!-- explanation -->
 
-Setting `b = Object.assign({},a);` will perform a shallow copy of object `a`. Since `b` is a shallow copy, any fields in `b` that have of the type "object", including Date objects, will be a ref to the field in `a`. However, unlike using `JSON.parse` and `JSON.stringify` to clone an object, `Object.assign` will work with non valid JSON values such as Functions and Symbols. See [MDN Description](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign#Examples) for a more detailed explanation.
+Setting `b = Object.assign({},a);` will perform a shallow copy of object `a`. Since `b` is a shallow copy, any fields in `b` of the type "object", including Date objects, will be a ref to the field in `a`. However, unlike using `JSON.parse` and `JSON.stringify` to clone an object, `Object.assign` will work with non valid JSON values such as Functions and Symbols. See [MDN Description](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign#Examples) for a more detailed explanation.
