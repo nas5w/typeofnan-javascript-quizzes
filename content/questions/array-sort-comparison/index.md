@@ -28,7 +28,7 @@ console.log(
 
 <!-- explanation -->
 
-There are a couple concepts a play here. First, the array `sort` method sorts your original array and also returns a reference to that array. This means that when you write `arr2.sort()`, the `arr2` array object is sorted.
+There are a couple concepts at play here. First, the array `sort` method sorts your original array and also returns a reference to that array. This means that when you write `arr2.sort()`, the `arr2` array object is sorted.
 
 It turns out, however, the sort order of the array doesn't matter when you're comparing objects. Since `arr1.sort()` and `arr1` point to the same object in memory, the first equality test returns `true`. This holds true for the second comparison as well: `arr2.sort()` and `arr2` point to the same object in memory.
 
