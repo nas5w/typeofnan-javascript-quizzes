@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, graphql } from 'gatsby';
-
+import { ClearAnswerModal } from '../components/modal';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 import { rhythm } from '../utils/typography';
@@ -43,13 +43,14 @@ const QuestionTemplate = props => {
     }
     return answer;
   });
-
   const clearAnswer = () => {
     setSelectedAnswer(null);
     setSubmittedAnswer(null);
     clearPersistedAnswer(title);
+    return false;
   };
-
+  const [isOpen, openClear] = useState(false);
+  
   useEffect(() => {
     if (selectedAnswer) {
       persistAnswer(title, selectedAnswer, correct);
@@ -179,16 +180,8 @@ const QuestionTemplate = props => {
             {submittedAnswer !== null && (
               <React.Fragment>
                 <br />
-                <Button
-                  onClick={() => {
-                    window.confirm(
-                      'Are you sure you want to clear your answer for this question?'
-                    ) && clearAnswer();
-                  }}
-                  className="ui red basic button"
-                >
-                  Clear My answer
-                </Button>
+                <Button className="ui red basic button" onClick={() => openClear(true)}>Clear My answer</Button>
+                <ClearAnswerModal modalIsOpen={isOpen}   clearAnswer={()=>openClear(clearAnswer())}  closeModal={()=>openClear(false)}/>
               </React.Fragment>
             )}
           </article>

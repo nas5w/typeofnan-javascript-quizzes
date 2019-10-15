@@ -15,7 +15,7 @@ const customStyles = {
 
 Modal.setAppElement('#___gatsby');
 
-export const AboutModal = props => {
+const AboutModal = props => {
   return (
     <Modal
       isOpen={props.modalIsOpen}
@@ -43,3 +43,23 @@ export const AboutModal = props => {
     </Modal>
   );
 };
+
+const ClearAnswerModal = props => {
+  return (
+    <Modal
+      isOpen={props.modalIsOpen}
+      onRequestClose={props.closeModal}
+      style={customStyles}
+      contentLabel="Clear My Answer"
+    >
+       <h1 className="ui header red">Warning !</h1>
+       <p>
+       Are you sure you want to clear your answer for this question?
+      </p>
+      <button className="ui button blue" onClick={props.closeModal}>No</button>
+      <button className="ui button red" onClick={props.clearAnswer}>Yes</button>
+    </Modal>
+  )
+}
+
+export{AboutModal,ClearAnswerModal}
