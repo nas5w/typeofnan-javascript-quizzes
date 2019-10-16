@@ -11,7 +11,7 @@ answers:
   - 'All of them'
 ---
 
-Consider two arrays `a` and `b` below. What is the option that is not correct to merge the arrays? 
+Consider two arrays `a` and `b` below. Which option below is **NOT** correct to merge the arrays? 
 
 ```javascript
 var a = [1,2,3];
