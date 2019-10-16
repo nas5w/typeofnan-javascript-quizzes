@@ -1,9 +1,9 @@
 ---
-title: Arrays and Shorthand.
+title: Arrays, Sorting, and Reversing
 tags:
   - shorthand
   - array
-order: 44
+order: 50
 date: '2019-10-08'
 answers: 
   - '[1, 3, 5, 7, 25]
@@ -22,10 +22,12 @@ answers:
 Consider the following two arrays and operations on them. What gets logged as a result of script execution ?
 
 ```javascript
-const ar = [5,1,3,7,25];
+const ar = [5, 1, 3, 7, 25];
 const ar1 = ar;
 console.log(ar1.sort());
-[5, 25].indexOf(ar[1]) != -1 && console.log(ar.reverse()) || ar[3] == 25 && console.log(ar);
+([5, 25].indexOf(ar[1]) != -1 &&
+  console.log(ar.reverse())) ||
+  (ar[3] == 25 && console.log(ar));
 console.log(ar1);
 ```
 
