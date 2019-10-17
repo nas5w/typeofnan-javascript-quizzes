@@ -10,6 +10,7 @@ import {
 } from '../utils/shouldRenderContributor';
 
 const Layout = props => {
+  const [loading, stopLoading] = useState(true);
   const [modalOpen, setModalOpen] = useState(false);
   const [contributors, setContributors] = useState([]);
   const headerRef = useRef();
@@ -30,6 +31,7 @@ const Layout = props => {
             )
           )
         );
+        stopLoading(false);
       })
       .catch(err => console.error(err));
   }, []);
@@ -141,7 +143,7 @@ const Layout = props => {
           </a>
         </p>
         <div>
-          {contributors.map(
+          {loading ? <div className="ui basic loading very padding segment"></div> : contributors.map(
             ({ login, avatar_url, html_url, id }) => (
               <a
                 key={id}
