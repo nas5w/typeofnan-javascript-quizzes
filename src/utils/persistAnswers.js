@@ -25,7 +25,7 @@ export const persistAnswer = (
       localStorage.removeItem(title);
   };
 
-export const clearAllPersistedAnswer => {
+export const clearAllPersistedAnswer = () => {
     typeof window !== 'undefined' &&
         localStorage.clear();
 };
