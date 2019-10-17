@@ -10,7 +10,7 @@ answers:
   - 'Undefined'
 ---
 
-What gets logged when we try to call `myFunction()`?
+When running Javascript in the browser, what gets logged when we try to call `myFunction()`?
 
 ```javascript
 function myFunction() {
