@@ -7,8 +7,8 @@ tags:
 order: 11
 date: '2019-09-29'
 answers:
-  - '1 2 3 // correct'
-  - 'a b c'
+  - '123 // correct'
+  - 'abc'
   - 'An error is thrown'
   - 'Something else'
 ---
@@ -16,8 +16,8 @@ answers:
 What gets logged in the following scenario?
 
 ```javascript
-const map = ['a', 'b', 'c'].map.bind([1, 2, 3]);
-map(el => console.log(el));
+const reduce = ['a', 'b', 'c'].reduce.bind([1, 2, 3]);
+reduce((acc, cur) => acc + cur, '');
 ```
 
 <!-- explanation -->
