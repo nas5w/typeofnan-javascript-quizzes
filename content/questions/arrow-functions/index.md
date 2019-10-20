@@ -12,7 +12,7 @@ answers:
   - 'undefined, Wooh // correct'
   - 'undefined, undefined'
 ---
-What are the return of the following `console.log`?
+What is returned from the following `console.log`s?
 
 ```javascript
 let dog = {
