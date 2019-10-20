@@ -1,11 +1,11 @@
 ---
 title: Equality Operators  
-tags: operators
-  - 
+tags:
+  - operators
 order: 51
 date: Sun Oct 20 2019 12:14:42 GMT-0700 (Pacific Daylight Time)
 answers: 
-  - 'true, false'
+  - 'true, false // correct'
   - 'true, true'
   - 'false, true'
   - 'false, false'
