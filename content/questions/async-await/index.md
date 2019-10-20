@@ -13,7 +13,7 @@ answers:
   - 'Something else'
 ---
 
-Consider the following async function and it's output, what will be displayed to the console when
+Consider the following async function and its output, what will be displayed to the console when
 calling the `f()` function?
 
 ```javascript
