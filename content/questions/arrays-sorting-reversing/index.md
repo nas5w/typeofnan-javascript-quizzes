@@ -25,12 +25,32 @@ Consider the following two arrays and operations on them. What gets logged as a 
 const ar = [5, 1, 3, 7, 25];
 const ar1 = ar;
 console.log(ar1.sort());
-([5, 25].indexOf(ar[1]) != -1 &&
-  console.log(ar.reverse())) ||
-  (ar[3] == 25 && console.log(ar));
+(
+  [5, 25].indexOf(ar[1]) != -1 && 
+  console.log(ar.reverse())
+) || 
+(
+  ar[3] == 25 && console.log(ar)
+);
 console.log(ar1);
 ```
 
 <!-- explanation -->
 
-Remember that in Javascript you operate on arrays by references. If ar is assigned to ar1 in fact ar1 shows te same point in memory as ar. Therefore console.log(ar1.sort()) sorts both arrays ar and ar1. The sorted array looks as follows [1, 25, 3, 5, 7], beacuse sorting arrays operates on strings although array have integer elements. Next : ar[1] is found in [5,25] therefore ar.reverse is logged , then ar[3]==25 is true - ar is logged.
+`const ar1 = ar` means that `ar1` points to the same array in memory as `ar`.  `ar1.sort()` works **in-place** and therefore modifies the original array `ar`.  **Both** variables `ar` and `ar1` point to the same sorted array.
+
+Remember that the default [sort](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort) function converts elements to strings and then sorts alphabetically, so the first `console.log` outputs `[1, 25, 3, 5, 7]`.
+
+Next, `ar[1]` is found in the array `[5, 25]`, resulting in `[5, 25].indexOf(ar[1]) != -1` evaluating to `true`, leading to the second part of the statement (`ar.reverse()`) being evaluated.  Because `ar.reverse()` also works **in-place** and modifies the original array, `ar` is now `[7, 5, 3, 25, 1]`, which is the output of the second `console.log`.
+
+Because nothing is technically returned from a `console.log`, the first part effectively now evaluates to the following:
+
+```javascript
+(
+  undefined
+) || (ar[3] == 25 && console.log(ar));
+```
+
+Only because `undefined` is falsy, the second half of the statement is now evaluated.  `ar[3] == 25` is true because the fourth element of the array is `25`, so this statement evaluates to `true` and `ar` is outputted in the third `console.log` as `[7, 5, 3, 25, 1]`.
+
+Finally, we know that `ar1` is still pointing to the same array in memory as `ar`, so the fourth log `console.log(ar1);` simply outputs the same array again (`[7, 5, 3, 25, 1]`).
