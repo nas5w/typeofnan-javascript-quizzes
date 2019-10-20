@@ -24,7 +24,8 @@ false
 ````
 
 answers: 
-  - true
+  - 'A'
+  - 'B true //correct'
 ---
 
 
