@@ -6,9 +6,9 @@ tags:
 order: 51
 date: Sun Oct 20 2019 13:01:02 GMT-0700 (Pacific Daylight Time)
 answers: 
-  - '['Banana', 'Lemon']'
-  - '['Lemon', 'Apple']'
-  - '['Orange', 'Lemon']'
+  - "['Banana', 'Lemon']"
+  - "['Lemon', 'Apple']"
+  - "['Orange', 'Lemon']"
 ---
 Given an array of fruits, after slice method is apllied, what will the result be?
 
