@@ -22,3 +22,5 @@ console.log(result);
 <!-- explanation -->
 
 While it's true a `Set` object will remove duplicates, the two values we create our `Set` with are references to different objects in memory, despite having identical key-value pairs. This is the same reason `{ a: 1 } === { a: 1 }` is `false`.
+
+It should be noted if the set was created using an object variable, say `obj = { a: 1 }`, `new Set([ obj, obj ])` would have only one element, since both elements in the array reference the same object in memory.
