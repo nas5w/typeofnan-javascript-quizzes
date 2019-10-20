@@ -4,6 +4,7 @@ import { AboutModal } from './modal';
 import { rhythm, scale } from '../utils/typography';
 import { Divider } from 'semantic-ui-react';
 import GitHubButton from 'react-github-btn';
+import { clearAllPersistedAnswer } from '../utils/persistAnswers';
 import {
   shouldRenderContributor,
   shuffle
@@ -94,6 +95,19 @@ const Layout = props => {
       <header>{header}</header>
 
       <main ref={headerRef}>{children}</main>
+      
+      <button
+      onClick={() => {
+        window.confirm(
+          'Are you sure you want to clear all answers'
+        ) && clearAllPersistedAnswer();
+        window.location.reload();
+      }}
+      className="ui red basic button"
+    >
+      Reset all answers
+    </button>
+
 
       <footer style={{ fontSize: '14px' }}>
         <Divider />
