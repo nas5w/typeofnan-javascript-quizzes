@@ -24,4 +24,4 @@ console.log(
 
 <!-- explanation -->
 
-The correct answer is 'function function function'- Object, Array and Number are all constructors (functions).
+The correct answer is 'function function function' - Object, Array and Number are all constructors (functions).

@@ -10,20 +10,20 @@ answers:
   - 'false'
 ---
 
-`a` and `b` are different objects with the same `firstname` property. Are these properties strictly equal to each other?
+`a` and `b` are different objects with the same `firstName` property. Are these properties strictly equal to each other?
 
 ```javascript
 const a = {
-  firstname: 'Bill'
+  firstName: 'Bill'
 };
 
 const b = {
-  firstname: 'Bill'
+  firstName: 'Bill'
 };
 
-console.log(a.firstname === b.firstname);
+console.log(a.firstName === b.firstName);
 ```
 
 <!-- explanation -->
 
-The answer is yes, they are. `a.firstname` is the string value `Bill` and `b.firstname` is the string value `Bill`. Two identical strings are always equal.
+The answer is yes, they are. `a.firstName` is the string value `Bill` and `b.firstName` is the string value `Bill`. Two identical strings are always equal.

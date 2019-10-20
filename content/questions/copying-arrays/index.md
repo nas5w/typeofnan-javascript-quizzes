@@ -27,7 +27,7 @@ const b = [ ...mainArray ];
 
 // C
 const c = [];
-mainArray.forEach( item => {
+mainArray.forEach(item => {
   c.push(item);
 });
 ```

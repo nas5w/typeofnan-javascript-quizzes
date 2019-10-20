@@ -14,7 +14,11 @@ answers:
 Consider the following object.
 
 ```javascript
-const obj = { 1: 1, 2: 2, 3: 3 };
+const obj = {
+  1: 1,
+  2: 2,
+  3: 3
+};
 ```
 
 Is `Object.keys` equal to `Object.values`?
