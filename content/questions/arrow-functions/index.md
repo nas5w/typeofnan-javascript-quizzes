@@ -12,21 +12,20 @@ answers:
   - 'undefined, Wooh // correct'
   - 'undefined, undefined'
 ---
-What are the return of the following `console.log`?
+What is returned from the following `console.log`?
 
 ```javascript
 let dog = {
     breed: "Border Collie",
-    Sound: "Wooh",
-    getBreed : () => { 
+    sound: "Wooh",
+    getBreed: () => { 
         return this.breed;
     },
     getSound: function() {
-        return this.Sound;
+        return this.sound;
     }
 };
-console.log(dog.getBreed());
-console.log(dog.getSound());
+console.log(dog.getBreed(), dog.getSound());
 ```
 
 <!-- explanation -->
