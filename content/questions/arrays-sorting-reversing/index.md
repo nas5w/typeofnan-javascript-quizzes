@@ -26,9 +26,12 @@ const ar = [5, 1, 3, 7, 25];
 const ar1 = ar;
 console.log(ar1.sort());
 (
-  [5, 25].indexOf(ar[1]) != -1
-  && console.log(ar.reverse())
-) || (ar[3] == 25 && console.log(ar));
+  [5, 25].indexOf(ar[1]) != -1 && 
+  console.log(ar.reverse())
+) || 
+(
+  ar[3] == 25 && console.log(ar)
+);
 console.log(ar1);
 ```
 
