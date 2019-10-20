@@ -33,4 +33,4 @@ console.log(ar1);
 
 <!-- explanation -->
 
-Remember that in Javascript you operate on arrays by references. If ar is assigned to ar1 in fact ar1 shows te same point in memory as ar. Therefore console.log(ar1.sort()) sorts both arrays ar and ar1. The sorted array looks as follows [1, 25, 3, 5, 7], beacuse sorting arrays operates on strings although array have integer elements. Next : ar[1] is found in [5,25] therefore ar.reverse is logged , then ar[3]==25 is true - ar is logged.
+Remember that in Javascript you operate on arrays by references. If ar is assigned to ar1 in fact ar1 shows te same point in memory as ar. Therefore console.log(ar1.sort()) sorts both arrays ar and ar1. The sorted array looks as follows [1, 25, 3, 5, 7], because sorting arrays operates on strings although array have integer elements. Next : ar[1] is found in [5,25] therefore ar.reverse is logged , then ar[3]==25 is true - ar is logged.
