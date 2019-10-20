@@ -11,7 +11,6 @@ answers:
   - ecmascript 
   - es2015 // correct
   - stage-6
-  - es6
 ---
 
 Which transpiler language supports `Template Literals Syntax`?
