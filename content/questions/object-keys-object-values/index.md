@@ -29,4 +29,4 @@ console.log(Object.keys(obj) == Object.values(obj));
 
 <!-- explanation -->
 
-In this case, `Object.keys` is `[1, 2, 3]` and `Object.values` is `[1, 2, 3]`... _but_ they are both different objects in memory, so the equality comparison will return `false`. You will see a lot of quiz questions here drilling into the concepts of object and array comparison!
+In this case, `Object.keys` converts the keys to be string `["1", "2", "3"]` and `Object.values` gives `[1, 2, 3]`. Even if the values turn out to be the same type, the two arrays are both different objects in memory, so the equality comparison will return `false`. You will see a lot of quiz questions here drilling into the concepts of object and array comparison!
