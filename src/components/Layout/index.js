@@ -1,22 +1,20 @@
 import React, { useRef, useState, useEffect } from 'react';
-import { Link } from 'gatsby';
-import { AboutModal } from './modal';
-import { rhythm, scale } from '../utils/typography';
 import { Divider } from 'semantic-ui-react';
 import GitHubButton from 'react-github-btn';
-import { clearAllPersistedAnswer } from '../utils/persistAnswers';
+import { AboutModal } from '../modal';
+import { rhythm } from '../../utils/typography';
+import Header from './Header';
+import { clearAllPersistedAnswer } from '../../utils/persistAnswers';
 import {
   shouldRenderContributor,
   shuffle
-} from '../utils/shouldRenderContributor';
+} from '../../utils/shouldRenderContributor';
 
 const Layout = props => {
   const [modalOpen, setModalOpen] = useState(false);
   const [contributors, setContributors] = useState([]);
   const headerRef = useRef();
   const { location, title, children } = props;
-  const rootPath = `${__PATH_PREFIX__}/`;
-  let header;
 
   useEffect(() => {
     fetch(
@@ -40,49 +38,6 @@ const Layout = props => {
       headerRef.current.scrollIntoView();
   }, [location]);
 
-  if (location.pathname === rootPath) {
-    header = (
-      <h1
-        style={{
-          ...scale(1.5),
-          fontSize: '30px',
-          marginBottom: '20px',
-          marginTop: 0,
-          backgroundColor: 'rgba(255, 255, 255, 0.9)'
-        }}
-      >
-        <Link
-          style={{
-            boxShadow: `none`,
-            textDecoration: `none`,
-            color: `inherit`
-          }}
-          to={`/`}
-        >
-          {title}
-        </Link>
-      </h1>
-    );
-  } else {
-    header = (
-      <h3
-        style={{
-          marginTop: 0
-        }}
-      >
-        <Link
-          style={{
-            boxShadow: `none`,
-            textDecoration: `none`,
-            color: `inherit`
-          }}
-          to={`/`}
-        >
-          {title}
-        </Link>
-      </h3>
-    );
-  }
   return (
     <div
       style={{
@@ -92,7 +47,10 @@ const Layout = props => {
         padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`
       }}
     >
-      <header>{header}</header>
+      <Header
+        pathname={location.pathname}
+        title={title}
+      />
 
       <main ref={headerRef}>{children}</main>
       
