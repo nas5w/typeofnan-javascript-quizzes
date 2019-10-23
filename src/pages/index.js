@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { Link, graphql } from 'gatsby';
 
 import Bio from '../components/bio';
-import Layout from '../components/layout';
+import Layout from '../components/Layout';
 import SEO from '../components/seo';
 import { getPersistedAnswer } from '../utils/persistAnswers';
 import 'semantic-ui-css/semantic.css';
