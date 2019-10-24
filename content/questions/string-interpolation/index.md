@@ -7,21 +7,20 @@ tags:
 order: 51
 date: Fri Oct 18 2019 22:06:13 GMT+0530 (India Standard Time)
 answers: 
-  - "possible! You should see a therapist after so much JavaScript lol"
-  - "Impossible! You should see a therapist after so much JavaScript lol // correct"
-  - "possible! You shouldn't see a therapist after so much JavaScript lol"
-  - "Impossible! You shouldn't see a therapist after so much JavaScript lol"
+  - "Soon we must all choose between what is right and what is easy"
+  - "Soon we must all choose between what is right and what is difficult // correct"
+  - "Soon we must all choose between what is wrong and what is easy"
+  - "Soon we must all choose between what is wrong and what is difficult"
 ---
 
 What's the value of output?
 
 ```javascript
-const output = `${[] && 'Im'}possible!
-You should${'' && `n't`} see a therapist after so much JavaScript lol`
+const output = `Soon we must all choose between what is ${[] ? 'right' : 'wrong'} and what is ${(() => false) ? 'difficult' : 'easy'}`
 ```
 
 <!-- explanation -->
 
-[] is a truthy value. With the && operator, the right-hand value will be returned if the left-hand value is a truthy value. In this case, the left-hand value [] is a truthy value, so "Im' gets returned.
+As [] is a truthy value, the above ternary condition returns 'right'.
 
-"" is a falsy value. If the left-hand value is falsy, nothing gets returned. n't doesn't get returned.
+We just defined the method but not calling it. Function is a truthy value is Javascript, hence 'difficult' appends to the string.
