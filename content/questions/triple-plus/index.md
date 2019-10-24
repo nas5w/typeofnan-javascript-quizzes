@@ -25,4 +25,4 @@ console.log(b +++ 3, b);
 
 The Postfix Increment operator (`++`) takes precedence over the addition operator (`+`). The Postfix Increment operator also coerces strings to numbers. It uses the coerced number in the current expression, and the incremented value is not available until the following expression. So `"4"` is converted to `4`, then `3` is added. Then `4` is incremented to `5`, which is visible when `b` is passed as the second argument to `console.log`
 
-[MDN Reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence)
+<a target="_blank" rel="noopener noreferrer" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence">MDN Reference</a>
