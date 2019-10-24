@@ -1,5 +1,5 @@
 ---
-title: The Walking Dead 
+title: The Walking Dead
 tags:
   - objects
   - delete keywords
@@ -28,7 +28,6 @@ const result = deleteSomething(a);
 console.log(result);
 ```
 
-
 <!-- explanation -->
 
-The output will be `undefined` because the `delete` operator has already deleted the property `something` before we attempt to return it. When try to access a non-existent object property, it will always return the value `undefined`. 
+The output will be `undefined` because the `delete` operator has already deleted the property `something` before we attempt to return it. When try to access a non-existent object property, it will always return the value `undefined`.

@@ -4,7 +4,7 @@ tags:
   - array
 order: 54
 date: '2019-10-20'
-answers: 
+answers:
   - 'A // correct'
   - 'B'
   - 'Both of them'
@@ -13,13 +13,13 @@ answers:
 There is a rotten bean which looks different inside a basket. Which option below is the right way to pick the rotten bean?
 
 ```javascript
-var basket = [0, 0, 0, 0, 9]
+var basket = [0, 0, 0, 0, 9];
 
-// A 
-basket.splice(4, 1)
+// A
+basket.splice(4, 1);
 
 // B
-basket.slice(4, 1)
+basket.slice(4, 1);
 ```
 
 <!-- explanation -->

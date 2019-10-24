@@ -11,21 +11,20 @@ answers:
   - 'Bob Changed bReturn'
   - 'Joe Changed aReturn // correct'
   - 'Bob Nested bReturn'
-
 ---
 
 Consider objects `a` and `b` below. What gets logged?
 
 ```javascript
-const a = { 
+const a = {
   stringField: 'Joe',
-  nestedField: {field: 'Nested'},
+  nestedField: { field: 'Nested' },
   functionField: () => 'aReturn'
 };
-const b = Object.assign({},a);
-b.stringField = 'Bob'
-b.nestedField.field = 'Changed'
-b.functionField = () => 'bReturn'
+const b = Object.assign({}, a);
+b.stringField = 'Bob';
+b.nestedField.field = 'Changed';
+b.functionField = () => 'bReturn';
 console.log(
   a.stringField,
   a.nestedField.field,

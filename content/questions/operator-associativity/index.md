@@ -6,7 +6,7 @@ tags:
   - precedence
 order: 46
 date: '2019-10-09'
-answers: 
+answers:
   - true and true
   - true and false // correct
   - false and false

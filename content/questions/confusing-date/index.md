@@ -1,5 +1,5 @@
 ---
-title: Date Constructor 
+title: Date Constructor
 tags:
   - date
   - constructor
@@ -13,9 +13,9 @@ answers:
 Consider the following code block which calls the Date constructor with 2 type of values. What will be the output of `console.log`?
 
 ```javascript
-let a = new Date("2019,1,1").toLocaleDateString();
-let b = new Date(2019,1,1).toLocaleDateString();
-console.log(a, b)
+let a = new Date('2019,1,1').toLocaleDateString();
+let b = new Date(2019, 1, 1).toLocaleDateString();
+console.log(a, b);
 ```
 
 <!-- explanation -->
