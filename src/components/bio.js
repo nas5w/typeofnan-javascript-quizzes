@@ -16,7 +16,7 @@ const Bio = () => {
         <a href="https://github.com/nas5w/typeofnan-javascript-quizzes">
           Star this repo on Github
         </a>{' '}
-        to follow along as new questions are added!
+        to follow along as new questions are added! Created by <a href="https://twitter.com/nas5w">Nick Scialli</a> and many other contributors listed below! 
       </p>
     </div>
   );
