@@ -9,7 +9,7 @@ date: Fri Oct 25 2019 14:27:00 GMT+0300 (Eastern European Summer Time)
 answers: 
   - 'true true true true'
   - 'true false true true'
-  - 'true true false true //correct'
+  - 'true true false true // correct'
   - 'true true false false'
   - 'false false false false'
 ---
