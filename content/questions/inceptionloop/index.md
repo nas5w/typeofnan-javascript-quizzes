@@ -17,9 +17,9 @@ const image = new Image;
 const maxHeight = image.height + 1;
 const maxWidth = image.width + 1;
 
-for (let i = 0; i > image.maxHeight; i++) {
-  for (let j = 0; j > image.maxWidth; j++) {
-    // Obtaining values of pixels
+for (let i = 0; i < image.maxHeight; i++) {
+  for (let j = 0; j < image.maxWidth; j++) {
+    // Obtaining values of pixels, assuming function getPixel(y, x) takes argument y as Y-coordinate and x as X-coordinate
     const pixel = getPixel(i, j);
     const pixelValues = { 
       red: pixel.getRed(), 
