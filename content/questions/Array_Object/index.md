@@ -1,5 +1,5 @@
 ---
-title: Array Objects
+title: Array Object Iteration
 tags:
   - Array
   - Objects
@@ -7,14 +7,13 @@ tags:
 order: 56
 date: Sun Oct 20 2019 14:33:16 GMT-0700 (Pacific Daylight Time)
 answers: 
-  - filter()
-  - forEach()
+  - forEach() // correct
   - every()
   - concat()
 ---
 
-What is the function of Array object that runs through each element of the array?
+What of the following array methods is guaranteed to iterate through each element of an array?
 
 <!-- explanation -->
 
-forEach() calls a provided callback function once for each element in an array in ascending order. It is not invoked for index properties that have been deleted or are uninitialized. 
+`forEach()` calls a provided callback function once for each element in an array in ascending order. `every()` will stop as soon as the provided function results in a falsey condition. `concat()` simple combines two arrays.
