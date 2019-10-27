@@ -4,7 +4,7 @@ tags:
   - strings
   - interpolation
   - template literals
-order: 51
+order: 54
 date: Fri Oct 18 2019 22:06:13 GMT+0530 (India Standard Time)
 answers: 
   - "Soon we must all choose between what is right and what is easy"
