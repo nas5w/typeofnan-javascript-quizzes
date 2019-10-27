@@ -9,7 +9,9 @@ answers:
   - 'False // correct'
 ---
 
-When using array.findIndex it will return 0 indicating that no element passed the test.
+True or False: when using `array.findIndex` it will return 0 indicating that no element passed the test.
 
 <!-- explanation -->
-findIndex will actually return a -1. This array method executes a callback function for each index until a truthy value is returned. If the array length is 0 or if the callback never returns a truthy value then findIndex will return -1.
+`findIndex` will actually return a `-1` since `0` would be a legitimate array index! 
+
+Under the hood, this array method executes a callback function for each index until a truthy value is returned. If the array length is 0 or if the callback never returns a truthy value then findIndex will return -1.
