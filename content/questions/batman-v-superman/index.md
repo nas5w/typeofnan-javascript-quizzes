@@ -8,7 +8,7 @@ date: '2019-09-29'
 answers:
   - '"Batman"'
   - '"Superman"'
-  - '"BatmanSuperman" // correct'
+  - '"Batman\nSuperman" // correct'
   - 'Nothing gets logged'
 ---
 
