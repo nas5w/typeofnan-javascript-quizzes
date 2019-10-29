@@ -23,7 +23,7 @@ const mainArray = ['one', 'two', 'three', 'five', 'four'];
 const a = mainArray;
 
 // B
-const b = [...mainArray];
+const b = [ ...mainArray ];
 
 // C
 const c = [];

@@ -11,19 +11,23 @@ answers:
   - 'Bob Changed'
   - 'Joe Changed'
   - 'Bob Nested'
+
 ---
 
 Consider objects `a` and `b` below. What gets logged?
 
 ```javascript
-const a = {
+const a = { 
   stringField: 'Joe',
-  nestedField: { field: 'Nested' }
+  nestedField: {field: 'Nested'}
 };
 const b = JSON.parse(JSON.stringify(a));
-b.stringField = 'Bob';
-b.nestedField.field = 'Changed';
-console.log(a.stringField, a.nestedField.field);
+b.stringField = 'Bob'
+b.nestedField.field = 'Changed'
+console.log(
+  a.stringField,
+  a.nestedField.field
+);
 ```
 
 <!-- explanation -->

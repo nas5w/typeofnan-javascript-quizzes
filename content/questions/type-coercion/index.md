@@ -6,7 +6,7 @@ tags:
   - type casting
 order: 52
 date: '2019-10-19'
-answers:
+answers: 
   - 'greeting + year.toString()'
   - 'greeting + String(year)'
   - 'greeting + year // correct'
@@ -15,7 +15,7 @@ answers:
 Consider the following variables `greeting` and `year`.
 
 ```javascript
-const greeting = 'Hello';
+const greeting = "Hello";
 const year = 2019;
 ```
 

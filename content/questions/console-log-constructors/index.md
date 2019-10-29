@@ -15,7 +15,11 @@ answers:
 Consider the following code block. What gets logged?
 
 ```javascript
-console.log(typeof Object, typeof Array, typeof Number);
+console.log(
+  typeof Object, 
+  typeof Array, 
+  typeof Number
+);
 ```
 
 <!-- explanation -->

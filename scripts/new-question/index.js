@@ -1,9 +1,4 @@
-const {
-  readdirSync,
-  mkdirSync,
-  readFileSync,
-  writeFileSync
-} = require('fs');
+const { readdirSync, mkdirSync, readFileSync, writeFileSync } = require('fs');
 const template = require('lodash.template');
 const path = require('path');
 
@@ -21,34 +16,24 @@ function init() {
   }
 
   const questionName = agrs[0];
-  const srcDir = `${path.dirname(
-    require.main.filename
-  )}/../../content/questions`;
+  const srcDir = `${path.dirname(require.main.filename)}/../../content/questions`;
   const existingQuestions = getDirectories(srcDir);
 
   if (existingQuestions.indexOf(questionName) > -1) {
-    throw new Error(
-      `Question ${questionName} already exists. Please, specify another name`
-    );
+    throw new Error(`Question ${questionName} already exists. Please, specify another name`);
   }
 
-  mkdirSync(`${srcDir}/${questionName}`, err => {
+  mkdirSync(`${srcDir}/${questionName}`, (err) => {
     if (err) throw err;
   });
 
-  const fileTemplate = readFileSync(
-    `${path.dirname(require.main.filename)}/index.md`,
-    'utf8'
-  );
+  const fileTemplate = readFileSync(`${path.dirname(require.main.filename)}/index.md`, 'utf8');
   const blankQuestionTmpl = template(fileTemplate);
 
-  writeFileSync(
-    `${srcDir}/${questionName}/index.md`,
-    blankQuestionTmpl({
-      order: existingQuestions.length,
-      date: new Date()
-    })
-  );
+  writeFileSync(`${srcDir}/${questionName}/index.md`, blankQuestionTmpl({
+    order: existingQuestions.length,
+    date: new Date(),
+  }));
 
   console.info('All done!');
 }

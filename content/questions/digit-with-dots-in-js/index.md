@@ -5,7 +5,7 @@ tags:
   - properties
 order: 44
 date: '2019-10-08'
-answers:
+answers: 
   - '[1, 2, 3, 4, 5]'
   - 'undefined // correct'
   - 'Syntax error'
@@ -16,7 +16,7 @@ What is the return of the following `console.log`?
 ```javascript
 const n = 5;
 
-console.log((1).n); // ?
+console.log(1..n); // ?
 ```
 
 <!-- explanation -->

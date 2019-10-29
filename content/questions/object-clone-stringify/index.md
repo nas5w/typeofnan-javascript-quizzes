@@ -10,16 +10,17 @@ answers:
   - 'true true true false'
   - 'true true false true // correct'
   - 'false false false false'
+
 ---
 
 Consider objects `a` and `b` below. What gets logged?
 
 ```javascript
-const a = {
+const a = { 
   stringField: 'Joe',
   numberField: 123,
   dateField: new Date('1995-12-17T03:24:00'),
-  nestedField: { field: 'Nested' }
+  nestedField: {field: 'Nested'}
 };
 const b = JSON.parse(JSON.stringify(a));
 console.log(

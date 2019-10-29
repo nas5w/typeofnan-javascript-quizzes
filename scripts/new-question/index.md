@@ -1,11 +1,14 @@
 ---
-title:
+title: 
 tags:
-  -
+  - 
 order: <%= order %>
 date: <%= date %>
-answers:
-  -
+answers: 
+  - 
 ---
 
+
+
 <!-- explanation -->
+
