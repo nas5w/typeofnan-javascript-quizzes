@@ -1,3 +1,6 @@
+# only use yarn
+package-lock.json
+
 # Logs
 logs
 *.log
