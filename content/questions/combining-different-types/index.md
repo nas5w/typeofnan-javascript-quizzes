@@ -14,9 +14,8 @@ answers:
 What gets logged in the following scenario?
 
 ```javascript
-
-console.log(2 + "1");
-console.log(2 - "1");
+console.log(2 + '1');
+console.log(2 - '1');
 ```
 
 <!-- explanation -->

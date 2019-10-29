@@ -1,5 +1,5 @@
 ---
-title: Using Array#flat 
+title: Using Array#flat
 tags:
   - array
   - es2019
@@ -14,8 +14,12 @@ answers:
 Consider the following array get a with depth 5, what will get logged.
 
 ```javascript
-const _array = [1,[2,[3,[4,[5,[6,[7],8],9],10]]],12]
-const result = _array.flat(5)
+const _array = [
+  1,
+  [2, [3, [4, [5, [6, [7], 8], 9], 10]]],
+  12
+];
+const result = _array.flat(5);
 console.log(result);
 ```
 

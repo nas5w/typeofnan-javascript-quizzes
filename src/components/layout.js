@@ -95,19 +95,18 @@ const Layout = props => {
       <header>{header}</header>
 
       <main ref={headerRef}>{children}</main>
-      
-      <button
-      onClick={() => {
-        window.confirm(
-          'Are you sure you want to clear all answers'
-        ) && clearAllPersistedAnswer();
-        window.location.reload();
-      }}
-      className="ui red basic button"
-    >
-      Reset all answers
-    </button>
 
+      <button
+        onClick={() => {
+          window.confirm(
+            'Are you sure you want to clear all answers'
+          ) && clearAllPersistedAnswer();
+          window.location.reload();
+        }}
+        className="ui red basic button"
+      >
+        Reset all answers
+      </button>
 
       <footer style={{ fontSize: '14px' }}>
         <Divider />
