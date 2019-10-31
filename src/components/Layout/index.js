@@ -1,8 +1,8 @@
 import React, { useRef, useState, useEffect } from 'react';
-import { Divider } from 'semantic-ui-react';
-import GitHubButton from 'react-github-btn';
 import { AboutModal } from '../modal';
 import { rhythm } from '../../utils/typography';
+import { Divider } from 'semantic-ui-react';
+import GitHubButton from 'react-github-btn';
 import Header from './Header';
 import { clearAllPersistedAnswer } from '../../utils/persistAnswers';
 import {
