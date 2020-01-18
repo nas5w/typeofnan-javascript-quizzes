@@ -9,6 +9,7 @@ import {
   shouldRenderContributor,
   shuffle
 } from '../utils/shouldRenderContributor';
+import { LearnMore } from './learn-more';
 
 const Layout = props => {
   const [loading, stopLoading] = useState(true);
@@ -97,22 +98,22 @@ const Layout = props => {
       <header>{header}</header>
 
       <main ref={headerRef}>{children}</main>
-      
-      <button
-      onClick={() => {
-        window.confirm(
-          'Are you sure you want to clear all answers'
-        ) && clearAllPersistedAnswer();
-        window.location.reload();
-      }}
-      className="ui red basic button"
-    >
-      Reset all answers
-    </button>
 
+      <button
+        onClick={() => {
+          window.confirm(
+            'Are you sure you want to clear all answers'
+          ) && clearAllPersistedAnswer();
+          window.location.reload();
+        }}
+        className="ui red basic button"
+      >
+        Reset all answers
+      </button>
 
       <footer style={{ fontSize: '14px' }}>
         <Divider />
+        <LearnMore />
         <p>
           <GitHubButton
             href="https://github.com/nas5w/typeofnan-javascript-quizzes"
@@ -157,22 +158,26 @@ const Layout = props => {
           </a>
         </p>
         <div>
-          {loading ? <div className="ui basic loading very padding segment"></div> : contributors.map(
-            ({ login, avatar_url, html_url, id }) => (
-              <a
-                key={id}
-                href={html_url}
-                style={{ boxShadow: 'none' }}
-              >
-                <img
-                  alt={login}
-                  src={avatar_url}
-                  style={{
-                    width: '10%',
-                    margin: '0 10px 10px 0'
-                  }}
-                />
-              </a>
+          {loading ? (
+            <div className="ui basic loading very padding segment"></div>
+          ) : (
+            contributors.map(
+              ({ login, avatar_url, html_url, id }) => (
+                <a
+                  key={id}
+                  href={html_url}
+                  style={{ boxShadow: 'none' }}
+                >
+                  <img
+                    alt={login}
+                    src={avatar_url}
+                    style={{
+                      width: '10%',
+                      margin: '0 10px 10px 0'
+                    }}
+                  />
+                </a>
+              )
             )
           )}
         </div>
