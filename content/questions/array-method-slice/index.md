@@ -10,7 +10,7 @@ answers:
   - '["Lemon", "Apple"]'
   - '["Orange", "Lemon"] // correct'
 ---
-Given an array of fruits, after slice method is apllied, what will the result be?
+Given an array of fruits, after slice method is applied, what will the result be?
 
 ---
 ```javascript
