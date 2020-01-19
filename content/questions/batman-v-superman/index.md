@@ -8,7 +8,7 @@ date: '2019-09-29'
 answers:
   - '"Batman"'
   - '"Superman"'
-  - '"BatmanSuperman" // correct'
+  - '"Batman Superman" // correct'
   - 'Nothing gets logged'
 ---
 
@@ -19,8 +19,7 @@ const superheroMaker = a => {
   return a instanceof Function ? a() : a;
 };
 
-console.log(superheroMaker(() => 'Batman'));
-console.log(superheroMaker('Superman'));
+console.log(superheroMaker(() => 'Batman'), superheroMaker('Superman'));
 ```
 
 <!-- explanation -->
