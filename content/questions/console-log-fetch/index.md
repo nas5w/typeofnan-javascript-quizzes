@@ -18,4 +18,4 @@ console.log(fetch);
 
 <!-- explanation -->
 
-What happens when you `console.log(fetch)` really depends on your current environment. If you `console.log` it in a [browser version](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API#Browser_compatibility) that has a window.fetch method, you will log the fetch function. If you have an older browser, or are using the node environment, you may well get a reference error.
+What happens when you `console.log(fetch)` really depends on your current environment. If you `console.log` it in a [browser version](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API#Browser_compatibility) that has a `window.fetch` method, you will log the fetch function. If you have an older browser, or are not in a browser environment, you will receive a ReferenceError.
