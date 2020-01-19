@@ -12,7 +12,8 @@ answers:
   - 'undefined, Wooh // correct'
   - 'undefined, undefined'
 ---
-What is returned from the following `console.log`?
+
+What gets logged in the following code?
 
 ```javascript
 let dog = {
@@ -30,5 +31,5 @@ console.log(dog.getBreed(), dog.getSound());
 
 <!-- explanation -->
 
-Arrow functions do not bind their own this, instead, they inherit the one from the parent scope, which is called "lexical scoping". That is the reason that the this in getBreed refers to the global object.
+The `this` inside an arrow function does not depend on how the function was called. Instead, they inherit the `this` of the parent scope. This is called "lexical scoping". In sloppy mode, `this` on the top level refers to the global object, so `getBreed`'s `this.breed` refers to the `breed` property on the global object, which doesn't exist.
 
