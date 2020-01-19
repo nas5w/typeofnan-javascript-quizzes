@@ -27,8 +27,6 @@ console.log([...a, ...b]);
 console.log(a + b);
 ```
 
-
-
 <!-- explanation -->
 
-Option C in this case is the right choice, because the arithmetic operator `+` only works for numeric values and not arrays. 
+Option C does not properly merge the arrays, because the arithmetic operator `+` only sensibly applies to strings and numbers. Any side of a `+` which refers to something other than a string or number will be converted into a string first, so this would result in the string `'1,2,3'` being concatenated with the string `'4,5,6'`, or `'1,2,34,5,6'`.
