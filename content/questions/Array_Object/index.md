@@ -12,8 +12,8 @@ answers:
   - concat()
 ---
 
-What of the following array methods is guaranteed to iterate through each element of an array?
+Which of the following array methods is guaranteed to iterate through each element of an array?
 
 <!-- explanation -->
 
-`forEach()` calls a provided callback function once for each element in an array in ascending order. `every()` will stop as soon as the provided function results in a falsey condition. `concat()` simple combines two arrays.
+`forEach()` calls a provided callback function once for each element in an array in ascending order. `every()` will stop as soon as the provided function results in a falsey condition. `concat()` simply combines two arrays.
