@@ -10,7 +10,6 @@ answers:
   - 'true true true false'
   - 'true true false true // correct'
   - 'false false false false'
-
 ---
 
 Consider objects `a` and `b` below. What gets logged?
@@ -33,4 +32,4 @@ console.log(
 
 <!-- explanation -->
 
-Setting `b = JSON.parse(JSON.stringify(a))` will perform a deep copy of object `a`. All primitive Javascript types (Boolean, String, and Number) will be copied correctly. However, non-valid JSON values (Date, undefined, Function, and other non-primitives) will not be copied correctly. In this instance, `JSON.stringify` will convert the Date object into an ISO string and it will remain a string when the stringified JSON is re-parsed. Since the two fields are different data types (Date object vs. string), the equality will yield false. See [MDN Description](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify#Description) for a more detailed explanation.
+Setting `b = JSON.parse(JSON.stringify(a))` will perform a deep copy of object `a`. All primitive JavaScript types (Boolean, String, and Number) will be copied correctly, as will plain objects and arrays. However, non-valid JSON values (undefined, Date, Function, and other class instances) will not be copied correctly. In this instance, `JSON.stringify` will convert the Date object into an ISO string and it will remain a string when the stringified JSON is re-parsed. Since the two fields are not the same type (one is a string, the other is a Date object), the `===` will evaluate to `false`. See [MDN Description](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify#Description) for a more detailed explanation.
