@@ -11,7 +11,7 @@ answers:
   - 'D'
 ---
 
-Which of the following is a valid way to delete property `color` from the `car` object?
+Which of the following is a valid way to delete the property `color` from the `car` object?
 
 ```javascript
 const car = {
@@ -37,6 +37,6 @@ car.color.delete();
 
 You can use the JavaScript [delete operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/delete) to remove a property from an object.
 
-Both option A and D will give TypeError, because neither `car.delete` nor `car.color.delete` is a function.
+Both option A and D will give a TypeError, because neither `car.delete` nor `car.color.delete` is a function.
 
-Option C will give Reference error becuase `color` is not defined. However, `delete car['color']` will work, notice the quotation mark around `color`.
+Option C will give a ReferenceError becuase `color` is not defined. However, `delete car['color']` will work - notice the quotation marks around `color`.
