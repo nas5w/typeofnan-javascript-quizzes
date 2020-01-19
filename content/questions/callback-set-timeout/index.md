@@ -19,32 +19,31 @@ Which of the following functions will add two variables and pass the sum to a ca
 // A
 const add = (x, y, callback) => {
   setTimeout(() => {
-    callback(x + y)
+    callback(x + y);
   }, 2);
-}
+};
 
 // B
 const add = (x, y, callback) => {
   setTimeout(() => {
-    callback(x + y)
+    callback(x + y);
   }, 2000);
-}
+};
 
 // C
 const add = (x, y, callback) => {
   setTimeout(() => {
-    callback(x + y, 2)
+    callback(x + y, 2);
   });
-}
-
+};
 
 // D
 const add = (x, y, callback) => {
   setTimeout(() => {
-    callback(x + y, 2000)
+    callback(x + y, 2000);
   });
-}
+};
 ```
 
 <!-- explanation -->
-The `setTimeout` function takes two variables: the first variable is the function to be executed and the second variable is the interval, in milliseconds, after which the function gets executed.
+The `setTimeout` function generally takes two variables: the first variable is the function to be executed, and the second variable is the interval, in milliseconds, after which the function gets executed.
