@@ -27,10 +27,11 @@ var x = 5;
 
 <!-- explanation -->
 
-This will print out `undefined` and `10`. JavaScript will hoist the `var x` declaration within the function scope, but it will not hoist the initialization. The code is equivalent to:
+This will print out `undefined` and `10`. JavaScript will hoist the `var x` to the top of the function (or top level), but it will not hoist the assignment. The code is equivalent to:
 
 ```javascript
-var x = 5;
+var x;
+x = 5;
 
 (function() {
   var x;
