@@ -11,7 +11,7 @@ answers:
   - 'none'
 ---
 
-String methods are used to work with string in Javascript. Which method would be used to find a specified value and return the position of the match?
+String methods are used to work with string in JavaScript. Which method would be used to find a specified value and return the position of the match?
 
 For example, what method would tell you that `"bird"` is at position `4` in the following `word` string?
 
