@@ -86,7 +86,10 @@ const Layout = props => {
       >
         Mailing List
       </a>{' '}
-      | <a href="https://typeofnan.dev">Blog</a>
+      | <a href="https://typeofnan.dev">Blog</a> |{' '}
+      <a href="https://youtube.com/c/typeofnan">
+        Tutorial Videos
+      </a>
       <header>{header}</header>
       <main ref={headerRef}>{children}</main>
       <button
