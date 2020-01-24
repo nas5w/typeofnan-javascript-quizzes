@@ -67,24 +67,7 @@ const Layout = props => {
       </h1>
     );
   } else {
-    header = (
-      <h3
-        style={{
-          marginTop: 0
-        }}
-      >
-        <Link
-          style={{
-            boxShadow: `none`,
-            textDecoration: `none`,
-            color: `inherit`
-          }}
-          to={`/`}
-        >
-          {title}
-        </Link>
-      </h3>
-    );
+    header = null;
   }
   return (
     <div
@@ -95,10 +78,17 @@ const Layout = props => {
         padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`
       }}
     >
+      <Link to="/">Home</Link> |{' '}
+      <a
+        href="https://buttondown.email/typeofnan"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Mailing List
+      </a>{' '}
+      | <a href="https://typeofnan.dev">Blog</a>
       <header>{header}</header>
-
       <main ref={headerRef}>{children}</main>
-
       <button
         onClick={() => {
           window.confirm(
@@ -110,7 +100,6 @@ const Layout = props => {
       >
         Reset all answers
       </button>
-
       <footer style={{ fontSize: '14px' }}>
         <Divider />
         <LearnMore />
