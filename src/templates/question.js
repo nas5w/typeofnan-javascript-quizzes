@@ -50,7 +50,7 @@ const QuestionTemplate = props => {
     return false;
   };
   const [isOpen, openClear] = useState(false);
-  
+
   useEffect(() => {
     if (selectedAnswer) {
       persistAnswer(title, selectedAnswer, correct);
@@ -171,7 +171,9 @@ const QuestionTemplate = props => {
                 <h2>Explanation:</h2>
                 <section
                   dangerouslySetInnerHTML={{
-                    __html: explanationContent
+                    __html:
+                      explanationContent +
+                      `<ul style="padding-left: 30px"><li><strong>Interested in learning more about JavaScript? Consider <a href="https://buttondown.email/typeofnan" target="_blank" rel="noopener noreferrer">signing up for the TypeOfNaN Newsletter</a> for periodic JavaScript tips!</strong></li></ul>`
                   }}
                 />
               </React.Fragment>
@@ -180,8 +182,19 @@ const QuestionTemplate = props => {
             {submittedAnswer !== null && (
               <React.Fragment>
                 <br />
-                <Button className="ui red basic button" onClick={() => openClear(true)}>Clear My answer</Button>
-                <ClearAnswerModal modalIsOpen={isOpen}   clearAnswer={()=>openClear(clearAnswer())}  closeModal={()=>openClear(false)}/>
+                <Button
+                  className="ui red basic button"
+                  onClick={() => openClear(true)}
+                >
+                  Clear My answer
+                </Button>
+                <ClearAnswerModal
+                  modalIsOpen={isOpen}
+                  clearAnswer={() =>
+                    openClear(clearAnswer())
+                  }
+                  closeModal={() => openClear(false)}
+                />
               </React.Fragment>
             )}
           </article>
