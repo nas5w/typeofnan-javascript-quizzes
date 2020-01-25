@@ -2,7 +2,7 @@ import React, { useRef, useState, useEffect } from 'react';
 import { Link } from 'gatsby';
 import { AboutModal } from './modal';
 import { rhythm, scale } from '../utils/typography';
-import { Divider } from 'semantic-ui-react';
+import { Divider, Card } from 'semantic-ui-react';
 import GitHubButton from 'react-github-btn';
 import { clearAllPersistedAnswer } from '../utils/persistAnswers';
 import {
@@ -105,7 +105,67 @@ const Layout = props => {
       </button>
       <footer style={{ fontSize: '14px' }}>
         <Divider />
-        <LearnMore />
+        <Card fluid>
+          <Card.Content>
+            <Card.Header>
+              <h2 style={{ margin: '20px 0' }}>
+                <i aria-hidden="true" class="mail icon"></i>{' '}
+                Mailing List!
+              </h2>
+            </Card.Header>
+            <Card.Description>
+              If you're learning a lot taking these quizzes,
+              consider signing up for my mailing list, where
+              I send ~weekly tips and lessons on JavaScript
+              right to your inbox!
+            </Card.Description>
+            <form
+              action="https://buttondown.email/api/emails/embed-subscribe/typeofnan"
+              method="post"
+              target="popupwindow"
+              onSubmit="window.open('https://buttondown.email/typeofnan', 'popupwindow')"
+              className="embeddable-buttondown-form"
+            >
+              <div style={{ margin: '20px 0' }}>
+                <i
+                  aria-hidden="true"
+                  class="check icon"
+                ></i>{' '}
+                Weekly tips
+                <br />
+                <i
+                  aria-hidden="true"
+                  class="check icon"
+                ></i>{' '}
+                No spam
+                <br />
+                <i
+                  aria-hidden="true"
+                  class="check icon"
+                ></i>{' '}
+                Unsubscribe any time
+              </div>
+              <label htmlFor="email">Email Address:</label>
+              <br />
+              <div className="ui icon input">
+                <input
+                  type="email"
+                  name="email"
+                  id="bd-email"
+                  required
+                />
+              </div>
+              <input type="hidden" value="1" name="embed" />
+              <button
+                className="ui green button"
+                style={{ marginLeft: '10px' }}
+              >
+                Subscribe!
+              </button>
+            </form>
+          </Card.Content>
+        </Card>
+        <Divider />
         <p>
           <GitHubButton
             href="https://github.com/nas5w/typeofnan-javascript-quizzes"
