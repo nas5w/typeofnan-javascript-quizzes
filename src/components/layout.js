@@ -155,7 +155,7 @@ const Layout = props => {
                   required
                 />
               </div>
-              <input type="hidden" value="1" name="embed" />
+              <input type="hidden" value="1" name="embed" /><br />
               <button
                 className="ui green button"
                 style={{ marginLeft: '10px' }}
