@@ -13,7 +13,7 @@ answers:
   - 'Something different is logged'
 ---
 
-What is the return of the following `console.log`?
+What is logged by the following snippet?
 
 ```javascript
 const a = { something: 1, someOtherThing: 2 };
