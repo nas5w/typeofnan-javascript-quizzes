@@ -7,7 +7,7 @@ date: '2019-09-27'
 answers:
   - 'The fetch function'
   - 'A reference error'
-  - 'It depends // correct'
+  - 'It depends on the environment you are in // correct'
 ---
 
 What gets logged when I try to log `fetch`?
