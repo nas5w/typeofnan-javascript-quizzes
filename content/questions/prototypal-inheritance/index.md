@@ -30,4 +30,6 @@ console.log(dog.speak());
 
 <!-- explanation -->
 
-Every time we create a new `Dog` instance, we set the `speak` property to that instance to be a function returning the string `woof`. Since this is being set every time we create a new `Dog` instance, we never use the prototypal `speak` property on `Dog` that returns the `arf` string.
+Every time we create a new `Dog` instance, we set the `speak` property of that instance to be a function returning the string `woof`. Then, we are adding another property also called `speak` to `Dog` prototype. When we call `dog.speak()`, we are always referring to the `speak` property in that instance. 
+
+If there wasn't any property with the name `speak` in the `dog` object, JavaScript would try to find it up the prototype chain, which in this case would be the prototypal `speak` property on `Dog` which returns the `arf` string. However, since `speak` is already defined in `dog`, calling `dog.speak` will return this property, effectively shadowing `Dog.prototype.speak`.
