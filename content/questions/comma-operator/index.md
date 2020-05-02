@@ -5,10 +5,10 @@ tags:
 order: 72
 date: Sat May 02 2020 18:45:16 GMT+0700 (Indochina Time)
 answers: 
-  - 6
-  - 27 // correct
-  - 15
-  - 28
+  - '6'
+  - '27 // correct'
+  - '15'
+  - '28'
 ---
 
 Consider the following code block. What gets logged?
