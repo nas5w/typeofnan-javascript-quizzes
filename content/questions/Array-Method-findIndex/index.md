@@ -9,7 +9,7 @@ answers:
   - 'False // correct'
 ---
 
-True or False: when using `array.findIndex` it will return 0 indicating that no element passed the test.
+True or False: `array.findIndex` will return 0 when no elements pass the test.
 
 <!-- explanation -->
 `findIndex` will actually return a `-1` since `0` would be a legitimate array index! 

@@ -14,13 +14,12 @@ answers:
 Consider the following scenario. What gets logged?
 
 ```javascript
-const a = 0.1
-const b = 0.2
-const c = 0.3
+const a = 0.1;
+const b = 0.2;
+const c = 0.3;
 
-console.log(a + b === c)
+console.log(a + b === c);
 ```
-
 
 <!-- explanation -->
 

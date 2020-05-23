@@ -13,21 +13,24 @@ answers:
   - '[true, false]'
   - '[false, false]'
 ---
-What does this snippet of code returns?
+
+What does the below function return?
 
 ```javascript
-function ArrayBolean(){
+function ArrayBoolean(){
   if([] && [1])
-    return [true, true]
+    return [true, true];
   else if([] && ![1])
-    return [true,false]
+    return [true,false];
   else if(![] && [1])
-    return [false,true]
+    return [false,true];
   else
-    return [false,false]
+    return [false,false];
 }
-ArrayBolean()
+ArrayBoolean();
 ```
 
 <!-- explanation -->
-In javascript both empty and non empty arrays are evaluated as true if they are not compared to a boolean, otherwise `[] == false` would evaluate to `true` because of the boolean comparison.
+In JavaScript, both empty and non empty arrays are truthy, like all objects. This is not the same thing as comparison - for example, if the arrays were loosely compared to a Boolean, the results would be different. `[] == false` would evaluate to `true` because the empty array, when converted into a primitive, is falsey.
+
+The first `if` statement is fulfilled, so `[true, true]` is returned.

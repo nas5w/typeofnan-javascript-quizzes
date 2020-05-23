@@ -39,7 +39,7 @@ The next line is where a lot of the action happens. It's generally best to first
 url.split('.').filter(Boolean);
 ```
 
-`url.split('.')` will split our `url` string by the `.` character, resulting in the following array: `['quiz', 'typeofnan', 'dev']`. applying `filter(Boolean)` on this array is the same as `filter(el => Boolean(el))`. Since all of the elements are truthy, `Boolean(el)` will always be `true`, meaning we don't actually filter anything out.
+`url.split('.')` will split our `url` string by the `.` character, resulting in the following array: `['quiz', 'typeofnan', 'dev']`. Applying `filter(Boolean)` on this array is the same as `filter(el => Boolean(el))`. Since all of the elements are truthy, `Boolean(el)` will always be `true`, meaning we don't actually filter anything out.
 
 The next bit applies object destructuring. Since our array is indeed an object, this is allowed.
 

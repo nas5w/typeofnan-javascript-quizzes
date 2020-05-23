@@ -28,12 +28,12 @@ const p3 = new Promise((resolve, reject) =>
 
 Promise.race([p1, p2, p3])
   .then((result) => console.log(result))
-  .catch((reason) => console.log("Something went wrong..."))
+  .catch((reason) => console.log("Something went wrong..."));
 ```
 
 <!-- explanation -->
 
-Given an iterable of Promises, [`Promise.race()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/race) returns a Promise that resolves or rejects with the value of _the first
-promise that settles_.
+Given an iterable of Promises, [`Promise.race()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/race) returns a Promise that resolves or rejects with the value of the first
+Promise that settles (the first Promise that resolves or rejects).
 
 In this case, `p3` settles first, rejecting after 10 ms and falling into the `catch()` handler.

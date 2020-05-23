@@ -10,19 +10,18 @@ answers:
   - '["Lemon", "Apple"]'
   - '["Orange", "Lemon"] // correct'
 ---
-Given an array of fruits, after slice method is applied, what will the result be?
 
----
+What will the value of `citrus` be in the below code?
+
 ```javascript
 var fruits = ['Banana', 'Orange', 'Lemon', 'Apple', 'Mango'];
 var citrus = fruits.slice(1, 3);
 ```
 
 <!-- explanation -->
-The reason why the result will be Orange and Lemon is that array index always starts at zero and the end index is "exclusive", meaning the returned array doesn't include that index. 
+The reason why the result will be `["Orange", "Lemon"]` is that the two parameters `.slice` accepts are:
 
-slice does not alter the original array. It returns a shallow copy of elements from the original array. Elements of the original array are copied into the returned array as follows:
+* The start index, inclusive
+* The end index, *exclusive* (the item at the end index will not be included in the result)
 
-For object references (and not the actual object), slice copies object references into the new array. Both the original and new array refer to the same object. If a referenced object changes, the changes are visible to both the new and original arrays.
-For strings, numbers and booleans (not String, Number and Boolean objects), slice copies the values into the new array. Changes to the string, number or boolean in one array do not affect the other array.
-If a new element is added to either array, the other array is not affected.
+`.slice` does not alter the original array. It returns a shallow copy of elements from the original array. It's only a shallow copy, so if an object is *mutated* in one of the arrays after slicing, the same object in the other array will have changed too, because the objects both point to the same location in memory. In contrast, *reassigning* any value in one array, primitive or otherwise, will have no effect on the other array. Simiarly, adding or removing items from one array will not affect the other.

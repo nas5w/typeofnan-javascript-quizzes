@@ -30,4 +30,4 @@ console.log(dog.speak());
 
 <!-- explanation -->
 
-Every time we create a new `Dog` instance, we set the `speak` property to that instance to be a function returning the string `woof`. Since this is being set every time we create a new `Dog` instance, we never use the prototypal `speak` property on `Dog` that returns the `arf` string.
+Every time we create a new `Dog` instance, we set the `speak` property of that instance to be a function returning the string `woof`. Since this is being set every time we create a new `Dog` instance, the interpreter never has to look farther up the prototype chain to find a `speak` property. As a result, the `speak` method on `Dog.prototype.speak` never gets used.

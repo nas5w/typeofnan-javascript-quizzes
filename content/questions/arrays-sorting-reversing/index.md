@@ -43,7 +43,7 @@ Remember that the default [sort](https://developer.mozilla.org/en-US/docs/Web/Ja
 
 Next, `ar[1]` is found in the array `[5, 25]`, resulting in `[5, 25].indexOf(ar[1]) != -1` evaluating to `true`, leading to the second part of the statement (`ar.reverse()`) being evaluated.  Because `ar.reverse()` also works **in-place** and modifies the original array, `ar` is now `[7, 5, 3, 25, 1]`, which is the output of the second `console.log`.
 
-Because nothing is technically returned from a `console.log`, the first part effectively now evaluates to the following:
+Because `console.log` returns `undefined`, the first part effectively now evaluates to the following:
 
 ```javascript
 (
@@ -51,6 +51,6 @@ Because nothing is technically returned from a `console.log`, the first part eff
 ) || (ar[3] == 25 && console.log(ar));
 ```
 
-Only because `undefined` is falsy, the second half of the statement is now evaluated.  `ar[3] == 25` is true because the fourth element of the array is `25`, so this statement evaluates to `true` and `ar` is outputted in the third `console.log` as `[7, 5, 3, 25, 1]`.
+Because `undefined` is falsy, the second half of the statement is now evaluated.  `ar[3] == 25` is true because the fourth element of the array is `25`, so this statement evaluates to `true` and `ar` is outputted in the third `console.log` as `[7, 5, 3, 25, 1]`.
 
 Finally, we know that `ar1` is still pointing to the same array in memory as `ar`, so the fourth log `console.log(ar1);` simply outputs the same array again (`[7, 5, 3, 25, 1]`).

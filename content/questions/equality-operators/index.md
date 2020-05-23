@@ -21,6 +21,6 @@ console.log(x == y);
 console.log(x === y);
 ```
 
-
 <!-- explanation -->
-The equality operator "==" first converts operands to the same types before doing a strict comparison so that's why "x == y" logs `true`. The identity operator "===" does a strict comparision also but without a type conversion. "x === y" therefore returns `false` because `x` and `y` do not share the same type.
+
+The equality operator `==` first converts operands to the same types before doing a strict comparison, so that's why `x == y` logs `true`. The identity operator "===" *only* carries out a strict comparision; there is no type conversion. `x === y` therefore returns `false` because `x` and `y` do not share the same type.

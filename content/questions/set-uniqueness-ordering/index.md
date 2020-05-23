@@ -12,7 +12,7 @@ answers:
   - '4 3'
 ---
 
-In the following problem, we use the `Set` object and spread operator to create a new array. What gets logged (to consider: Are items forced to be unique? Are they sorted?)
+In the following problem, we use the `Set` object and spread syntax to create a new array. What gets logged (to consider: Are items forced to be unique? Are they sorted?)
 
 ```javascript
 const arr = [...new Set([3, 1, 2, 3, 4])];
@@ -21,4 +21,4 @@ console.log(arr.length, arr[2]);
 
 <!-- explanation -->
 
-The `Set` object will force unique elements but will not change order. The resultant `arr` array will be `[3, 1, 2, 4]`, meaning `arr.length` is `4` and `arr[2]` (the third element of the array) is `2`.
+The `Set` object will force unique elements (duplicate elements already in the set are ignored), but will not change order. The resultant `arr` array will be `[3, 1, 2, 4]`, meaning `arr.length` is `4` and `arr[2]` (the third element of the array) is `2`.

@@ -23,4 +23,4 @@ console.log(
 
 <!-- explanation -->
 
-Unfortunately, our short-circuit evaluation will not work as intended here: `notifications !== 1 && 's'` evaluates to `false`, meaning we will actually be logging `You have 1 notificationfalse`. If we want our snippet to work correctly, we could consider a ternary operator.
+Unfortunately, our short-circuit evaluation will not work as intended here: `notifications !== 1 && 's'` evaluates to `false`, meaning we will actually be logging `You have 1 notificationfalse`. If we want our snippet to work correctly, we could consider the conditional operator: `${notifications === 1 ? '' : 's'}`.
