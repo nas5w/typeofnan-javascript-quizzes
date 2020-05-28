@@ -80,14 +80,14 @@ const Layout = props => {
     >
       <Link to="/">Home</Link> |{' '}
       <a
-        href="https://buttondown.email/typeofnan"
+        href="https://buttondown.email/devtuts"
         target="_blank"
         rel="noopener noreferrer"
       >
         Mailing List
       </a>{' '}
       | <a href="https://typeofnan.dev">Blog</a> |{' '}
-      <a href="https://youtube.com/c/typeofnan">
+      <a href="https://youtube.com/c/devtutsco">
         Tutorial Videos
       </a>
       <header>{header}</header>
@@ -120,10 +120,10 @@ const Layout = props => {
               right to your inbox!
             </Card.Description>
             <form
-              action="https://buttondown.email/api/emails/embed-subscribe/typeofnan"
+              action="https://buttondown.email/api/emails/embed-subscribe/devtuts"
               method="post"
               target="popupwindow"
-              onSubmit="window.open('https://buttondown.email/typeofnan', 'popupwindow')"
+              onSubmit="window.open('https://buttondown.email/devtuts', 'popupwindow')"
               className="embeddable-buttondown-form"
             >
               <div style={{ margin: '20px 0' }}>
@@ -155,7 +155,8 @@ const Layout = props => {
                   required
                 />
               </div>
-              <input type="hidden" value="1" name="embed" /><br />
+              <input type="hidden" value="1" name="embed" />
+              <br />
               <button
                 className="ui green button"
                 style={{ marginLeft: '10px' }}
