@@ -13,7 +13,7 @@ answers:
   - 'Something different is logged'
 ---
 
-What is the return of the following `console.log`?
+What is the output of the following `console.log`?
 
 ```javascript
 const a = { something: 1, someOtherThing: 2 };
@@ -28,7 +28,6 @@ const result = deleteSomething(a);
 console.log(result);
 ```
 
-
 <!-- explanation -->
 
-The output will be `undefined` because the `delete` operator has already deleted the property `something` before we attempt to return it. When try to access a non-existent object property, it will always return the value `undefined`. 
+The output will be `undefined` because the `delete` operator has already deleted the property `something` before we attempted to return it. When we try to access a non-existent object property, it will always return the value `undefined`. 

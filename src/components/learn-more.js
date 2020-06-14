@@ -14,7 +14,7 @@ export const LearnMore = () => (
       Want to learn more about JavaScript development?
       Consider{' '}
       <a
-        href="https://buttondown.email/typeofnan"
+        href="https://buttondown.email/devtuts"
         target="_blank"
         rel="noopener noreferrer"
       >

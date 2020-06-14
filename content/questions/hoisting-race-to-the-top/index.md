@@ -49,7 +49,7 @@ foo();
 
 <!-- explanation -->
 
-The answer is `first` for the first question. While both function declarations and variable declarations are hoisted, function declarations are hoisted first and then variables. Duplicate var declarations (but not asssignments!) are also ignored. So, what is interpreted by the Engine is:
+The answer is `first` for the first question. While both function declarations and variable declarations are hoisted, function declarations are hoisted first and then variables. Duplicate var declarations (but not asssignments!) are also ignored. So, what is interpreted by the engine is:
 
 ```javascript
 function immaBeOnTop() {

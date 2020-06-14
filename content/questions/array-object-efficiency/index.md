@@ -30,4 +30,4 @@ for (let i = 0; i < arr.length; i++) {
 
 <!-- explanation -->
 
-When `b` is being set, the `b[arr[i]]` property is set to the current index on each loop. When `a` is being set, the spread operator (`...`) will create a shallow copy of the accumulator object (`acc`) on each loop and additionally set the new property. This shallow copy is more expensive than not performing a shallow copy. Therefore, `b` is being set more efficiently.
+When `b` is being set, the `b[arr[i]]` property is set to the current index on each iteration. When `a` is being set, the spread syntax (`...`) will create a shallow copy of the accumulator object (`acc`) on each iteration and additionally set the new property. This shallow copy is more expensive than not performing a shallow copy; `a` requires the construction of 2 intermediate objects before the result is achieved, whereas `b` does not construct any intermediate objects. Therefore, `b` is being set more efficiently.

@@ -28,4 +28,4 @@ console.log(myFunc('Hello world'));
 
 <!-- explanation -->
 
-The first time we call the function, `str.length` is greater than 1 ("Hello World" is 11 characters), so we return the same function called on `str.slice(1)`, which is the string "ello World". We repeat this process until the string is only one character long: the character "d". We then log that character.
+The first time we call the function, `str.length` is greater than 1 ("Hello World" is 11 characters), so we return the same function called on `str.slice(1)`, which is the string "ello World". We repeat this process until the string is only one character long: the character "d", which gets returned to the initial call of `myFunc`. We then log that character.

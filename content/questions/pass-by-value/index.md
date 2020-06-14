@@ -40,5 +40,5 @@ console.log(c1[2]);
 
 <!-- explanation -->
 
-Because `a2` and `c2` refer to the same objects in memory as `a1` and `c1`, when their properties `hobby` and `[2]` were changed, those changes could also be seen through `a1` and `c1`.  The change made to `b2` was not changing a property, rather, replacing the `b2` variable itself.  Replacing a variable with a new value has no effect on the original value so `b1` remained unchanged.
+Because `a2` and `c2` refer to the same objects in memory as `a1` and `c1`, when their properties `hobby` and `[2]` were changed, those changes could also be seen through `a1` and `c1`.  The change made to `b2` was not changing a property, rather, replacing the `b2` variable itself.  Replacing a variable with a new value has no effect on the original value, so `b1` remained unchanged.
 

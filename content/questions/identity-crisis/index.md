@@ -14,7 +14,7 @@ answers:
   - 'false false false false'
 ---
 
-Consider the following comparison function and it's applications. What gets logged?
+Consider the following comparison function and its applications. What gets logged?
 
 ```javascript
 const compare = a => a === a;
@@ -27,6 +27,6 @@ console.log(compare([NaN]));
 
 <!-- explanation -->
 
-Out of all the built-in JavaScript objects, NaN aka Not-A-Number is the only one that compares unequal to every other value, including itself.
+Out of all JavaScript values, `NaN` aka Not-A-Number is the only one that compares unequal to every other value, including itself.
 
 Note that `[NaN]` is just a regular array that contains a single element so it will be always equal to itself.

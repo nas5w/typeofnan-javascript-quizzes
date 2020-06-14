@@ -12,16 +12,33 @@ answers:
   - 'Good morning,'
   - 'undefined // correct'
 ---
-What does this snippet of code returns?
+
+What does this snippet of code return?
+
 ```javascript
-  function Greetings(name) {
-    return 
-      "Good morning, " + name
-  }
+function Greetings(name) {
+  return
+    "Good morning, " + name
+}
 
 Greetings("Giovanni")
 ```
 
-
 <!-- explanation -->
-When inserting a new line, javascript implicitly add a semicolon at the end of it. This means that the return statement would look like `return;` that evaluate to `undefined`.
+
+There are a number of keywords and syntax constructions which are not permitted to have newlines at a particular point. For example, `return`, `continue`, `break`, `throw`, and `yield`, if connected with another JavaScript token on the right-hand side, are forbidden to be separated from that token by a newline. For example, when `throw`ing something, the start of the thrown expression must be on the same line as the `throw`.
+
+When the interpreter is parsing JavaScript text and comes across one of these situations where a newline is forbidden, but a newline is found, and the preceding token (`return`, `continue`, etc) does *not* end with a semicolon, a semicolon will be inserted. So, the interpreter parses the code above into:
+
+```javascript
+function Greetings(name) {
+  return;
+    "Good morning, " + name;
+}
+
+Greetings("Giovanni");
+```
+
+Nothing is returned, so the return value is `undefined`.
+
+For more information about the rules for Automatic Semicolon Insertion, see [this question](https://stackoverflow.com/a/2846298).

@@ -34,7 +34,7 @@ console.log(foo(), bar())
 
 Although the `foo()` and `bar()` functions above look almost identical, `bar()` returns
 `undefined`. This is because JavaScript automatically inserts semicolons after
-certain statements, including `return` statements.
+certain statements when they are followed by a newline, including `return` statements.
 
 Let's look at both functions and see where JavaScript inserts semicolons:
 
