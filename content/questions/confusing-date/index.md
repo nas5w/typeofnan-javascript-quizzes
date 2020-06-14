@@ -10,7 +10,7 @@ answers:
   - '1/1/2019 1/1/2019'
 ---
 
-Consider the following code block which calls the Date constructor with 2 type of values. What will be the output of `console.log`?
+Consider the following code block which calls the Date constructor with 2 type of values. In a US environment, what will be the output of `console.log`?
 
 ```javascript
 let a = new Date("2019,1,1").toLocaleDateString();
