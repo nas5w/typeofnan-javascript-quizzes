@@ -3,12 +3,12 @@ title: Template Literals
 tags:
   - compiling
   - scripting
-  - ei11 
+  - ie11
   - babel
 order: 53
 date: Sat Oct 12 2019 17:08:35 GMT-0400 (Eastern Daylight Time)
-answers: 
-  - ecmascript 
+answers:
+  - ecmascript
   - es2015 // correct
   - stage-6
 ---
