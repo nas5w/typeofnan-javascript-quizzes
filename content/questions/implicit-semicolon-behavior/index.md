@@ -4,14 +4,16 @@ tags:
   - semicolon
   - implicit
   - print
-order: 58
+order: 73
 date: Mon, 27 Jan 2020 17:28:48 GMT
 answers: 
   - '[1, 2]'
   - '[1, 2, 3]'
   - 'ReferenceError // correct'
 ---
+
 What does this snippet of code print?
+
 ```javascript
 let array = [1, 2]
 
