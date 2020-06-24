@@ -6,3 +6,7 @@ h1,
 h3 a {
   font-family: 'Permanent Marker';
 }
+
+#filter-questions {
+  margin-bottom: 1rem;
+}
