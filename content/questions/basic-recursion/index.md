@@ -23,7 +23,7 @@ const myFunc = str => {
   return str;
 };
 
-console.log(myFunc('Hello world'));
+console.log(myFunc('Hello World'));
 ```
 
 <!-- explanation -->
