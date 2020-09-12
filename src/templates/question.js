@@ -173,7 +173,7 @@ const QuestionTemplate = props => {
                   dangerouslySetInnerHTML={{
                     __html:
                       explanationContent +
-                      `<ul style="padding-left: 30px"><li><strong>Interested in learning more about JavaScript? Consider <a href="https://buttondown.email/devtuts" target="_blank" rel="noopener noreferrer">signing up for the TypeOfNaN Newsletter</a> for periodic JavaScript tips!</strong></li></ul>`
+                      `<ul style="padding-left: 30px"><li><strong>Interested in learning more about JavaScript? Consider <a href="https://youtube.com/c/devtutsco" target="_blank" rel="noopener noreferrer">subscribing to my YouTube channel</a> where I teach JavaScript, React, and Typescript!</strong></li></ul>`
                   }}
                 />
               </React.Fragment>
