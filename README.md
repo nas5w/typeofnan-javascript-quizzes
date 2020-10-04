@@ -11,7 +11,7 @@ View the app: :point_right: [https://quiz.typeofnan.dev](https://quiz.typeofnan.
 
 <hr />
 
-# :rocket: How to run the app locally
+# :Rocket: How to run the app locally
 
 In order to use this app locally, the package manager _yarn_ needs to be installed
 
