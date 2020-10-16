@@ -38,4 +38,4 @@ Option A just creates a new reference to the same array. In order to copy all th
 
 Keep in mind that methods B and C are making **shallow copies**. This works in the example because all the values are strings. If `mainArray` had objects nested within it, the objects wouldn't be cloned; rather, both the original array and the cloned array would be holding a reference to the same object, so a change to the object in one array would result in a change to the object in the other array.
 
-Remember, JavaScript passes by reference, not value. If you'd like to learn more about arrays and how to create shallow copies (like this example shows), check out the [MDN Array Reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)
+Remember, objects in JavaScript are passed by reference, not by value. If you'd like to learn more about arrays and how to create shallow copies (like this example shows), check out the [MDN Array Reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)
