@@ -1,5 +1,5 @@
 ---
-title:
+title: Session Storage
 tags:
   - storage
 order: 75
