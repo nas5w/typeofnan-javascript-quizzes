@@ -5,23 +5,11 @@ tags:
 order: 76
 date: '2021-04-10'
 answers:
-  - 'Option a: `if (age < 21) {
-		return "Sorry, you\'re too young.";
-	  } else {
-		return "Hey, you may enter the bar.";
-	  }`'
+  - 'Sorry, you\'re too young.'
 
-  - 'Option b: `if (age > 21) {
-		return "Hey, you may enter the bar";
-	} else {
-		return "Sorry, you\'re too young.";
-	}` // correct'
+  - 'Hey, you may enter the bar // correct'
 
-  - 'Option c: `if (age < 21) {
-		return "Hey, you may enter the bar";
-	} else {
-		return "Sorry, you\'re too young.";
-	}`'
+  - 'error'
 ---
 
  Friday Night Drinks! Create a variable that holds a person's age. If their age is greater than 21, return "Hey, you may enter the bar"; otherwise return "Sorry, you're too young."
