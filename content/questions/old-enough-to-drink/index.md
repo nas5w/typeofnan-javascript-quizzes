@@ -5,7 +5,7 @@ tags:
 order: 76
 date: '2021-04-10'
 answers:
-  - 'Sorry, you\'re too young.'
+  - 'Sorry, you're too young!'
 
   - 'Hey, you may enter the bar // correct'
 
@@ -24,7 +24,7 @@ function oldEnough() {
 	if (age > 21) {
 		return "Hey, you may enter the bar";
 	} else {
-		return "Sorry, you're too young.";
+		return "Sorry, you're too young!";
 	}
 };
 
