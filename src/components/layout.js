@@ -9,7 +9,6 @@ import {
   shouldRenderContributor,
   shuffle
 } from '../utils/shouldRenderContributor';
-import { LearnMore } from './learn-more';
 
 const Layout = props => {
   const [loading, stopLoading] = useState(true);
@@ -159,7 +158,7 @@ const Layout = props => {
               <br />
               <button
                 className="ui green button"
-                style={{ marginLeft: '10px' }}
+                style={{ marginTop: '10px' }}
               >
                 Subscribe!
               </button>
@@ -225,9 +224,10 @@ const Layout = props => {
                     alt={login}
                     src={`${avatar_url}&s=48`}
                     style={{
-                      width: '10%',
                       margin: '0 10px 10px 0'
                     }}
+                    height="48px"
+                    width="48px"
                   />
                 </a>
               )
