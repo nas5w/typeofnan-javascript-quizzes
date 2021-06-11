@@ -223,7 +223,7 @@ const Layout = props => {
                 >
                   <img
                     alt={login}
-                    src={avatar_url}
+                    src={`${avatar_url}&s=48`}
                     style={{
                       width: '10%',
                       margin: '0 10px 10px 0'
