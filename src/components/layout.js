@@ -5,37 +5,37 @@ import { rhythm, scale } from '../utils/typography';
 import { Divider, Card } from 'semantic-ui-react';
 import GitHubButton from 'react-github-btn';
 import { clearAllPersistedAnswer } from '../utils/persistAnswers';
-import {
-  shouldRenderContributor,
-  shuffle
-} from '../utils/shouldRenderContributor';
+// import {
+//   shouldRenderContributor,
+//   shuffle
+// } from '../utils/shouldRenderContributor';
 
 const Layout = props => {
-  const [loading, stopLoading] = useState(true);
+  // const [loading, stopLoading] = useState(true);
   const [modalOpen, setModalOpen] = useState(false);
-  const [contributors, setContributors] = useState([]);
+  // const [contributors, setContributors] = useState([]);
   const headerRef = useRef();
   const { location, title, children } = props;
   const rootPath = `${__PATH_PREFIX__}/`;
   let header;
 
-  useEffect(() => {
-    fetch(
-      'https://api.github.com/repos/nas5w/typeofnan-javascript-quizzes/contributors?per_page=1000'
-    )
-      .then(res => res.json())
-      .then(users => {
-        setContributors(
-          shuffle(
-            users.filter(user =>
-              shouldRenderContributor(user.id)
-            )
-          )
-        );
-        stopLoading(false);
-      })
-      .catch(err => console.error(err));
-  }, []);
+  // useEffect(() => {
+  //   fetch(
+  //     'https://api.github.com/repos/nas5w/typeofnan-javascript-quizzes/contributors?per_page=1000'
+  //   )
+  //     .then(res => res.json())
+  //     .then(users => {
+  //       setContributors(
+  //         shuffle(
+  //           users.filter(user =>
+  //             shouldRenderContributor(user.id)
+  //           )
+  //         )
+  //       );
+  //       stopLoading(false);
+  //     })
+  //     .catch(err => console.error(err));
+  // }, []);
 
   useEffect(() => {
     location.pathname !== '/' &&
@@ -201,15 +201,18 @@ const Layout = props => {
         </p>
         <h3>Contributors</h3>
         <p>
-          Thanks to these awesome contributors for helping
-          out with tasks ranging from adding questions to
-          fixing typos. If you have time to help out, please
-          consider{' '}
+          Thanks to{' '}
+          <a href="https://github.com/nas5w/typeofnan-javascript-quizzes/graphs/contributors">
+            these awesome contributors
+          </a>{' '}
+          for helping out with tasks ranging from adding
+          questions to fixing typos. If you have time to
+          help out, please consider{' '}
           <a href="https://github.com/nas5w/typeofnan-javascript-quizzes#contributing">
             contributing!
           </a>
         </p>
-        <div>
+        {/* <div>
           {loading ? (
             <div className="ui basic loading very padding segment"></div>
           ) : (
@@ -233,7 +236,7 @@ const Layout = props => {
               )
             )
           )}
-        </div>
+        </div> */}
         <br />
         <p>
           <strong>Note on answer data persistence: </strong>

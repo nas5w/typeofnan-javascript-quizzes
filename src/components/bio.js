@@ -23,7 +23,11 @@ const Bio = () => {
           <a href="https://twitter.com/nas5w">
             Nick Scialli
           </a>{' '}
-          and many other contributors listed below!
+          and{' '}
+          <a href="https://github.com/nas5w/typeofnan-javascript-quizzes/graphs/contributors">
+            many other contributors
+          </a>
+          !
         </p>
       </div>
       <LearnMore />
