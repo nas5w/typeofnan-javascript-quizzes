@@ -14,14 +14,13 @@ export const LearnMore = () => (
       <ul style={{ marginLeft: '20px' }}>
         <li>
           <a
-            href="https://buttondown.email/devtuts"
+            href="https://howthewebworks.substack.com"
             target="_blank"
             rel="noopener noreferrer"
           >
             Sign up for my free newsletter
           </a>{' '}
-          where I periodically send out digestible bits of
-          JavaScript knowledge!
+          about how the web works!
         </li>
         <li>
           <a
