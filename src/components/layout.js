@@ -79,7 +79,7 @@ const Layout = props => {
     >
       <Link to="/">Home</Link> |{' '}
       <a
-        href="https://buttondown.email/devtuts"
+        href="https://howthewebworks.substack.com"
         target="_blank"
         rel="noopener noreferrer"
       >
