@@ -33,7 +33,7 @@ First, before you can use the app, you have to run this command to install all t
 
 `yarn install`
 
-### 3. Start and view the app :eyes:
+### 3. Start and view the app ****eyes
 
 After you've installed all the dependencies, run this command to start the app:
 
