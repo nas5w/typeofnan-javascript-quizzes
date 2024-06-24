@@ -39,4 +39,4 @@ You can use the JavaScript [delete operator](https://developer.mozilla.org/en-US
 
 Both option A and D will give a TypeError, because neither `car.delete` nor `car.color.delete` is a function.
 
-Option C will give a ReferenceError becuase `color` is not defined. However, `delete car['color']` will work - notice the quotation marks around `color`.
+Option C will give a ReferenceError because `color` is not defined. However, `delete car['color']` will work - notice the quotation marks around `color`.
